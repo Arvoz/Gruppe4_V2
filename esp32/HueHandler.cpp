@@ -4,8 +4,8 @@
 #include <vector>
 
 // BRIDGE IP AND USERNAME NEEDS TO BE DYNAMIC, WILL FIX LATER:
-const char* hueBridgeIP = "";
-const char* apiUsername = "";
+const char* hueBridgeIP = "192.168.1.181";
+const char* apiUsername = "ez-4DhpG03fVStwV0S3Xkf4KskaaMqdPK9ewDW2N";
 int numberOfLights;
 bool lightsOn;
 std::vector<int> hueID;
@@ -60,7 +60,6 @@ void lightsDefault() {
         client.setInsecure();
 
         String payload = lightsOn ? "{\"on\": false}" : "{\"on\": true, \"bri\": 254, \"ct\": 370}";
-        lightsOn = !lightsOn;
 
         int httpResponseCode = http.PUT(payload);
 
@@ -79,4 +78,5 @@ void lightsDefault() {
 
         http.end();
     }
+  lightsOn = !lightsOn;
 }
