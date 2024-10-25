@@ -1,3 +1,5 @@
 
 /gui/SimpleGUIApp/bin
 /gui/SimpleGUIApp/obj
+/Backend/obj
+/Backend/bin
