@@ -1,0 +1,44 @@
+@model IEnumerable<Backend.Core.Domain.Device>
+
+<h2>Devices</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Device Name</th>
+            <th>Status</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var device in Model)
+        {
+            <tr>
+                <td>@device.DeviceName</td>
+                <td>@device.Status</td>
+                <td>
+                    <form asp-action="Delete" method="post">
+                        <input type="hidden" name="id" value="@device.Id" />
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<h3>Add New Device</h3>
+<form asp-action="Add" method="post">
+    <div class="form-group">
+        <label for="DeviceName">Device Name</label>
+        <input type="text" class="form-control" id="DeviceName" name="DeviceName" required />
+    </div>
+    <div class="form-group">
+        <label for="Status">Status</label>
+        <select class="form-control" id="Status" name="Status">
+            <option value="Active">Active</option>
+            <option value="Inactive">Inactive</option>
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Add Device</button>
+</form>

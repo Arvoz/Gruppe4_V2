@@ -1,0 +1,67 @@
+﻿@model List<Backend.Core.Domain.Group>
+@{
+    ViewData["Title"] = "Group";
+}
+
+<h2>Groups</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Group Name</th>
+            <th>Devices</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var group in Model)
+        {
+            <tr>
+                <td>@group.GroupName</td>
+                <td>
+                    @if (group.Devices.Any())
+                    {
+                        <ul>
+                            @foreach (var device in group.Devices)
+                            {
+                                <li>@device.DeviceName (@device.Status)</li>
+                            }
+                        </ul>
+                    }
+                    else
+                    {
+                        <p>No devices in this group</p>
+                    }
+                </td>
+                <td>
+                    <form asp-action="Delete" method="post">
+                        <input type="hidden" name="id" value="@group.Id" />
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<h3>Add New Group</h3>
+
+<!-- Skjema for å legge til en ny gruppe med et gruppenavn -->
+<form asp-action="AddGroup" method="post">
+    <div class="form-group">
+        <label for="GroupName">Group Name</label>
+        <input type="text" class="form-control" id="GroupName" name="GroupName" required />
+    </div>
+
+    <div class="form-group">
+        <label for="DeviceId">Select Device to Add to Group</label>
+        <select class="form-control" id="DeviceId" name="deviceId">
+            @foreach (var device in ViewBag.Devices as List<Backend.Core.Domain.Device>)
+            {
+                <option value="@device.Id">@device.DeviceName</option>
+            }
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Create Group and Add Device</button>
+</form>

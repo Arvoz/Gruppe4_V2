@@ -1,0 +1,52 @@
+C:\Users\Stefan\SimpleGUIApp\bin\Debug\net6.0-windows\SimpleGUIApp.exe
+C:\Users\Stefan\SimpleGUIApp\bin\Debug\net6.0-windows\SimpleGUIApp.deps.json
+C:\Users\Stefan\SimpleGUIApp\bin\Debug\net6.0-windows\SimpleGUIApp.runtimeconfig.json
+C:\Users\Stefan\SimpleGUIApp\bin\Debug\net6.0-windows\SimpleGUIApp.dll
+C:\Users\Stefan\SimpleGUIApp\bin\Debug\net6.0-windows\ref\SimpleGUIApp.dll
+C:\Users\Stefan\SimpleGUIApp\bin\Debug\net6.0-windows\SimpleGUIApp.pdb
+C:\Users\Stefan\SimpleGUIApp\obj\Debug\net6.0-windows\SimpleGUIApp.csproj.AssemblyReference.cache
+C:\Users\Stefan\SimpleGUIApp\obj\Debug\net6.0-windows\SimpleGUIApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Stefan\SimpleGUIApp\obj\Debug\net6.0-windows\SimpleGUIApp.AssemblyInfoInputs.cache
+C:\Users\Stefan\SimpleGUIApp\obj\Debug\net6.0-windows\SimpleGUIApp.AssemblyInfo.cs
+C:\Users\Stefan\SimpleGUIApp\obj\Debug\net6.0-windows\SimpleGUIApp.csproj.CoreCompileInputs.cache
+C:\Users\Stefan\SimpleGUIApp\obj\Debug\net6.0-windows\SimpleGUIApp.dll
+C:\Users\Stefan\SimpleGUIApp\obj\Debug\net6.0-windows\ref\SimpleGUIApp.dll
+C:\Users\Stefan\SimpleGUIApp\obj\Debug\net6.0-windows\SimpleGUIApp.pdb
+C:\Users\Stefan\SimpleGUIApp\obj\Debug\net6.0-windows\SimpleGUIApp.genruntimeconfig.cache
+C:\Users\Stefan\SimpleGUIApp\bin\Debug\net6.0-windows\xunit.runner.visualstudio.testadapter.dll
+C:\Users\Stefan\SimpleGUIApp\bin\Debug\net6.0-windows\xunit.runner.reporters.netcoreapp10.dll
+C:\Users\Stefan\SimpleGUIApp\bin\Debug\net6.0-windows\xunit.runner.utility.netcoreapp10.dll
+C:\Users\Stefan\SimpleGUIApp\bin\Debug\net6.0-windows\Castle.Core.dll
+C:\Users\Stefan\SimpleGUIApp\bin\Debug\net6.0-windows\Moq.dll
+C:\Users\Stefan\SimpleGUIApp\bin\Debug\net6.0-windows\xunit.abstractions.dll
+C:\Users\Stefan\SimpleGUIApp\bin\Debug\net6.0-windows\xunit.assert.dll
+C:\Users\Stefan\SimpleGUIApp\bin\Debug\net6.0-windows\xunit.core.dll
+C:\Users\Stefan\SimpleGUIApp\bin\Debug\net6.0-windows\xunit.execution.dotnet.dll
+C:\Users\Stefan\SimpleGUIApp\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Diagnostics.EventLog.Messages.dll
+C:\Users\Stefan\SimpleGUIApp\obj\Debug\net6.0-windows\SimpleGUIApp.csproj.CopyComplete
+C:\Users\sos_s\Downloads\SimpleGUIApp (2)\SimpleGUIApp\bin\Debug\net6.0-windows\xunit.runner.visualstudio.testadapter.dll
+C:\Users\sos_s\Downloads\SimpleGUIApp (2)\SimpleGUIApp\bin\Debug\net6.0-windows\xunit.runner.reporters.netcoreapp10.dll
+C:\Users\sos_s\Downloads\SimpleGUIApp (2)\SimpleGUIApp\bin\Debug\net6.0-windows\xunit.runner.utility.netcoreapp10.dll
+C:\Users\sos_s\Downloads\SimpleGUIApp (2)\SimpleGUIApp\bin\Debug\net6.0-windows\SimpleGUIApp.exe
+C:\Users\sos_s\Downloads\SimpleGUIApp (2)\SimpleGUIApp\bin\Debug\net6.0-windows\SimpleGUIApp.deps.json
+C:\Users\sos_s\Downloads\SimpleGUIApp (2)\SimpleGUIApp\bin\Debug\net6.0-windows\SimpleGUIApp.runtimeconfig.json
+C:\Users\sos_s\Downloads\SimpleGUIApp (2)\SimpleGUIApp\bin\Debug\net6.0-windows\SimpleGUIApp.dll
+C:\Users\sos_s\Downloads\SimpleGUIApp (2)\SimpleGUIApp\bin\Debug\net6.0-windows\SimpleGUIApp.pdb
+C:\Users\sos_s\Downloads\SimpleGUIApp (2)\SimpleGUIApp\bin\Debug\net6.0-windows\Castle.Core.dll
+C:\Users\sos_s\Downloads\SimpleGUIApp (2)\SimpleGUIApp\bin\Debug\net6.0-windows\Moq.dll
+C:\Users\sos_s\Downloads\SimpleGUIApp (2)\SimpleGUIApp\bin\Debug\net6.0-windows\xunit.abstractions.dll
+C:\Users\sos_s\Downloads\SimpleGUIApp (2)\SimpleGUIApp\bin\Debug\net6.0-windows\xunit.assert.dll
+C:\Users\sos_s\Downloads\SimpleGUIApp (2)\SimpleGUIApp\bin\Debug\net6.0-windows\xunit.core.dll
+C:\Users\sos_s\Downloads\SimpleGUIApp (2)\SimpleGUIApp\bin\Debug\net6.0-windows\xunit.execution.dotnet.dll
+C:\Users\sos_s\Downloads\SimpleGUIApp (2)\SimpleGUIApp\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Diagnostics.EventLog.Messages.dll
+C:\Users\sos_s\Downloads\SimpleGUIApp (2)\SimpleGUIApp\obj\Debug\net6.0-windows\SimpleGUIApp.csproj.AssemblyReference.cache
+C:\Users\sos_s\Downloads\SimpleGUIApp (2)\SimpleGUIApp\obj\Debug\net6.0-windows\SimpleGUIApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sos_s\Downloads\SimpleGUIApp (2)\SimpleGUIApp\obj\Debug\net6.0-windows\SimpleGUIApp.AssemblyInfoInputs.cache
+C:\Users\sos_s\Downloads\SimpleGUIApp (2)\SimpleGUIApp\obj\Debug\net6.0-windows\SimpleGUIApp.AssemblyInfo.cs
+C:\Users\sos_s\Downloads\SimpleGUIApp (2)\SimpleGUIApp\obj\Debug\net6.0-windows\SimpleGUIApp.csproj.CoreCompileInputs.cache
+C:\Users\sos_s\Downloads\SimpleGUIApp (2)\SimpleGUIApp\obj\Debug\net6.0-windows\SimpleGU.1637C06B.Up2Date
+C:\Users\sos_s\Downloads\SimpleGUIApp (2)\SimpleGUIApp\obj\Debug\net6.0-windows\SimpleGUIApp.dll
+C:\Users\sos_s\Downloads\SimpleGUIApp (2)\SimpleGUIApp\obj\Debug\net6.0-windows\refint\SimpleGUIApp.dll
+C:\Users\sos_s\Downloads\SimpleGUIApp (2)\SimpleGUIApp\obj\Debug\net6.0-windows\SimpleGUIApp.pdb
+C:\Users\sos_s\Downloads\SimpleGUIApp (2)\SimpleGUIApp\obj\Debug\net6.0-windows\SimpleGUIApp.genruntimeconfig.cache
+C:\Users\sos_s\Downloads\SimpleGUIApp (2)\SimpleGUIApp\obj\Debug\net6.0-windows\ref\SimpleGUIApp.dll
