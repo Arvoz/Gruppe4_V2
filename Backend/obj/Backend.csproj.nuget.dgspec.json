@@ -1,28 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\erlin\\OneDrive\\Dokumenter\\GitHub\\Gruppe4\\Backend\\Backend.csproj": {}
+    "C:\\Users\\sos_s\\Documents\\GitHub\\Gruppe4_V2\\Backend\\Backend.csproj": {}
   },
   "projects": {
-    "C:\\Users\\erlin\\OneDrive\\Dokumenter\\GitHub\\Gruppe4\\Backend\\Backend.csproj": {
+    "C:\\Users\\sos_s\\Documents\\GitHub\\Gruppe4_V2\\Backend\\Backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\erlin\\OneDrive\\Dokumenter\\GitHub\\Gruppe4\\Backend\\Backend.csproj",
+        "projectUniqueName": "C:\\Users\\sos_s\\Documents\\GitHub\\Gruppe4_V2\\Backend\\Backend.csproj",
         "projectName": "Backend",
-        "projectPath": "C:\\Users\\erlin\\OneDrive\\Dokumenter\\GitHub\\Gruppe4\\Backend\\Backend.csproj",
-        "packagesPath": "C:\\Users\\erlin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\erlin\\OneDrive\\Dokumenter\\GitHub\\Gruppe4\\Backend\\obj\\",
+        "projectPath": "C:\\Users\\sos_s\\Documents\\GitHub\\Gruppe4_V2\\Backend\\Backend.csproj",
+        "packagesPath": "C:\\Users\\sos_s\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\sos_s\\Documents\\GitHub\\Gruppe4_V2\\Backend\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\erlin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\sos_s\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

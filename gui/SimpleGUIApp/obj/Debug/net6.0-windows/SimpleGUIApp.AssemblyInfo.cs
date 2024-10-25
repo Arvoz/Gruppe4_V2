@@ -13,11 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SimpleGUIApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-<<<<<<< Updated upstream
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e326b5533ad265cb13ce7b575b083290c36fa8cc")]
-=======
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
->>>>>>> Stashed changes
 [assembly: System.Reflection.AssemblyProductAttribute("SimpleGUIApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SimpleGUIApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

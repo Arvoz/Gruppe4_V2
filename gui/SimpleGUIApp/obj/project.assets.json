@@ -392,11 +392,7 @@
       "outputPath": "C:\\Users\\sos_s\\Downloads\\SimpleGUIApp (2)\\SimpleGUIApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-<<<<<<< Updated upstream
-        "C:\\Users\\erlin\\AppData\\Roaming\\NuGet\\NuGet.Config"
-=======
         "C:\\Users\\sos_s\\AppData\\Roaming\\NuGet\\NuGet.Config"
->>>>>>> Stashed changes
       ],
       "originalTargetFrameworks": [
         "net6.0-windows"
