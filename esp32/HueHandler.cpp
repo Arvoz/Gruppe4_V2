@@ -23,6 +23,8 @@ void getHueID() {
         String response = http.getString();
         JSONVar jsonData = JSON.parse(response);
 
+        Serial.println(jsonData);
+
         if (JSON.typeof(jsonData) == "undefined") {
             Serial.println("Parsing JSON failed!");
         }
