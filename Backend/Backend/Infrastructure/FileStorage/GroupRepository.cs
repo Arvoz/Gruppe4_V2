@@ -5,12 +5,11 @@ namespace Backend.Infrastructure.FileStorage
 {
     public class GroupRepository : IGroupRepository
     {
+        private readonly IJsonFileHandler<Group> _jsonFileHandler;
 
-        private readonly JsonFileHandler<Group> _jsonFileHandler;
-
-        public GroupRepository(string filePath)
+        public GroupRepository(IJsonFileHandler<Group> jsonFileHandler)
         {
-            _jsonFileHandler = new JsonFileHandler<Group>(filePath);
+            _jsonFileHandler = jsonFileHandler;
         }
 
         public async Task<List<Group>> GetAllGroupsAsync()
@@ -21,7 +20,7 @@ namespace Backend.Infrastructure.FileStorage
         public async Task<Group> GetGroupByIdAsync(int id)
         {
             var groups = await _jsonFileHandler.ReadFromFileAsync();
-            return groups.FirstOrDefault(g => g.Id == id);
+            return groups.FirstOrDefault(g => g.Id == id)!;
         }
 
         public async Task AddGroupAsync(Group group)
@@ -50,7 +49,7 @@ namespace Backend.Infrastructure.FileStorage
             var group = groups.FirstOrDefault(g => g.Id == groupId);
             if (group != null)
             {
-                var deviceToRemove = group.Devices.FirstOrDefault(g => g.Id == deviceId);
+                var deviceToRemove = group.Devices.FirstOrDefault(d => d.Id == deviceId);
                 if (deviceToRemove != null)
                 {
                     group.Devices.Remove(deviceToRemove);
@@ -69,6 +68,5 @@ namespace Backend.Infrastructure.FileStorage
                 await _jsonFileHandler.SaveToFileAsync(groups);
             }
         }
-
     }
 }

@@ -26,7 +26,7 @@ namespace Backend.Core.Service
         public async Task<Group> GetGroupByNameAsync(string groupName)
         {
             var groups = await _groupRepository.GetAllGroupsAsync();
-            return groups.FirstOrDefault(g => g.GroupName == groupName);
+            return groups.FirstOrDefault(g => g.GroupName == groupName) ?? new Group();
         }
 
         public async Task AddGroupAsync(Group group)
