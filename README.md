@@ -1,10 +1,10 @@
 Innhold
 
-Vi lager en backend med c# og .NET rammeverk. Vi har da lagd et prosjekt med ASP.NET med MVC som vi bruker heksagonal arkitektur i.
+Vi lager en backend med C# og .NET rammeverk. Vi har da laget et prosjekt med ASP.NET med MVC som vi bruker heksagonal arkitektur i.
 
 I mappen Backend vil du finne:
 
-Core (kjerne mappen)
+Core (kjernemappen)
 
 -- Domain (kjerne)
 Dette er her vi skriver klasser som vi bygger videre på i ports og adaptere.
@@ -13,8 +13,8 @@ Dette er her vi skriver klasser som vi bygger videre på i ports og adaptere.
 Her skriver vi interface til repository og services. Repository er der logikk for lagring skal skje mens Service er det som skal bli brukt på klient siden.
 
 -- Service
-Det er her vi lager en service klasse som imlementerer et interface fra ports. Her lager vi funksjoner som for eksempel å lage, slette eller oppdatere ting.
-Service er det som vi kommer til å bruke i Controller i MVC.
+Det er her vi lager en service klasse som implementerer et interface fra ports. Her lager vi funksjoner som for eksempel å lage, slette eller oppdatere ting.
+Service er det vi kommer til å bruke i Controller i MVC.
 
 -- DTO (Data Transfer Object)
 Her skal DTO klasser lage som kun skal sende ting fra serveren til klienten.
@@ -37,14 +37,14 @@ Det er her vi kommer til å lage tester for prosjektet vårt.
 Nå kommer vi til MVC strukturen
 
 Controller ()
-Det er her vi lager api til nettsiden og funksjoner den kan bruke.
+Det er her vi lager API til nettsiden og funksjoner den kan bruke.
 
 Views 
 Her lager vi cshtml til den controlleren viewmappen tilhører. 
 For eksempel Views/Device hører til Controller/DeviceController.
 
 wwwroot
-Her kan vi lage css og javascrip til nettsiden, og vi kan også legge til bilder som vi kan bruke.
+Her kan vi lage css og javascript til nettsiden, og vi kan også legge til bilder som vi kan bruke.
 
 --------------------------------------
 
