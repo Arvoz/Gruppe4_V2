@@ -66,17 +66,23 @@ namespace SimpleGUIApp
                 Location = new System.Drawing.Point(form.ClientSize.Width - 220, 10)
             };
 
-            LoadGroupsFromJson(); // Laster inn grupper fra JSON-filen
+            LoadGroupsFromJson(); // Laster inn grupper fra standard JSON-fil
 
             form.Controls.Add(groupComboBox);
         }
 
-        private void LoadGroupsFromJson()
+        // Load groups from a JSON file into the ComboBox
+        // Parameter "filePath" allows for a custom file path, defaulting to "groups.json"
+        public void LoadGroupsFromJson(string filePath = "groups.json")
         {
-            string filePath = @"groups.json"; // Oppdater denne filbanen til riktig sted
-
             try
             {
+                if (!File.Exists(filePath))
+                {
+                    MessageBox.Show($"Filen ble ikke funnet: {filePath}");
+                    return;
+                }
+
                 string jsonData = File.ReadAllText(filePath);
                 List<Group> groups = JsonSerializer.Deserialize<List<Group>>(jsonData);
 
