@@ -6,6 +6,7 @@
     <thead>
         <tr>
             <th>Device Name</th>
+            <th>Type</th>
             <th>Status</th>
             <th></th>
         </tr>
@@ -15,6 +16,7 @@
         {
             <tr>
                 <td>@device.DeviceName</td>
+                <td>@device.Type</td>
                 <td>@device.Status</td>
                 <td>
                     <form asp-action="Delete" method="post">
@@ -32,6 +34,10 @@
     <div class="form-group">
         <label for="DeviceName">Device Name</label>
         <input type="text" class="form-control" id="DeviceName" name="DeviceName" required />
+    </div>
+    <div class="form-group">
+        <label for="DeviceName">Device Type</label>
+        <input type="text" class="form-control" id="Type" name="Type" required />
     </div>
     <div class="form-group">
         <label for="Status">Status</label>

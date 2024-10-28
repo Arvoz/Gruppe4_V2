@@ -1,18 +1,1 @@
-[
-    {
-        "Id": 1,
-        "GroupName": "Stue",
-        "Devices": [
-            { "Id": 1, "DeviceName": "Philips Hue", "Type": null, "Status": false },
-            { "Id": 2, "DeviceName": "Samsung TV", "Type": null, "Status": false }
-        ]
-    },
-    {
-        "Id": 2,
-        "GroupName": "Kjøkken",
-        "Devices": [
-            { "Id": 1, "DeviceName": "Philips Hue", "Type": null, "Status": false },
-            { "Id": 2, "DeviceName": "Kjøleskap", "Type": null, "Status": false }
-        ]
-    }
-]
+[{"id":1,"groupName":"Stue","devices":[{"id":5,"deviceName":"Philips Hue","type":"Lys","status":false},{"id":6,"deviceName":"Philips Hue 2","type":"Lys","status":false}]}]

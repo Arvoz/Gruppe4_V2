@@ -1,6 +1,9 @@
 ﻿using Backend.Core.Domain;
 using Backend.Core.Ports;
 using Microsoft.AspNetCore.Mvc;
+using System.IO;
+using System.Threading.Tasks;
+using Newtonsoft.Json; 
 
 namespace Backend.Controllers
 {
@@ -8,6 +11,8 @@ namespace Backend.Controllers
     {
         private readonly IGroupService _groupService;
         private readonly IDeviceService _deviceService;
+
+        private readonly string _groupFilePath = "../groups.json";
 
         public GroupController(IGroupService groupService, IDeviceService deviceService)
         {
@@ -73,5 +78,23 @@ namespace Backend.Controllers
             await _groupService.DeleteGroupAsync(id);
             return RedirectToAction("Index");
         }
+
+
+        public async Task<IActionResult> GetData()
+        {
+            var group = await _groupService.GetAllGroupsAsync();
+            return Ok(group);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> PostFromGui([FromBody] string message)
+        {
+
+            Console.WriteLine("Respone from GUI: " + message);
+
+            return Ok("Data Motatt");
+
+        }
+
     }
 }

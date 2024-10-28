@@ -179,8 +179,10 @@ namespace SimpleGUIApp
             };
             getRequestButton.Click += async (sender, e) => 
             {
-                string response = await new ApiHandler(form).SendGetRequest("https://jsonplaceholder.typicode.com/posts/1");
+                string response = await new ApiHandler(form).SendGetRequest("http://localhost:5013/Group/GetData");
                 UpdateScreen("GET Response: " + response);
+                string jsonData = response;
+                File.WriteAllText("./groups.json", jsonData);
             };
             form.Controls.Add(getRequestButton);
 
@@ -192,8 +194,8 @@ namespace SimpleGUIApp
             };
             postRequestButton.Click += async (sender, e) => 
             {
-                string jsonData = "{ \"title\": \"foo\", \"body\": \"bar\", \"userId\": 1 }";
-                string response = await new ApiHandler(form).SendPostRequest("https://jsonplaceholder.typicode.com/posts", jsonData);
+                // string jsonData = "{ \"title\": \"foo\", \"body\": \"bar\", \"userId\": 1 }";
+                string response = await new ApiHandler(form).SendPostRequest("http://localhost:5013/group/PostFromGui", "Hello from GUI");
                 UpdateScreen("POST Response: " + response);
             };
             form.Controls.Add(postRequestButton);
