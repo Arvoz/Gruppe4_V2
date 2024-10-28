@@ -19,15 +19,8 @@ namespace SimpleGUIApp
             uiComponents = new UIComponents(this);
             apiHandler = new ApiHandler(this);
 
-            // Setup UI and attach events
+            // Setup UI
             uiComponents.SetupUI();
-            this.Resize += new EventHandler(Form1_Resize);
-        }
-
-        // Event handler for resizing the form
-        private void Form1_Resize(object sender, EventArgs e)
-        {
-            uiComponents.AdjustForResize(this.ClientSize.Width);
         }
     }
 }

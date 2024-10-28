@@ -1,7 +1,8 @@
 using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Text.Json;
 using System.Windows.Forms;
-
-//DYNAMISK RESIZING FUNKER IKKE HELT SOM DEN SKAL LMAO
 
 namespace SimpleGUIApp
 {
@@ -14,6 +15,8 @@ namespace SimpleGUIApp
         private Label sliderLabel;
         private GroupBox buttonGroup;
         private GroupBox sliderGroup;
+        private Button getRequestButton;
+        private Button postRequestButton;
 
         public UIComponents(Form form)
         {
@@ -27,6 +30,9 @@ namespace SimpleGUIApp
             SetupButtonGroup();
             SetupSliderGroup();
             SetupApiButtons();
+
+            // Koble AdjustForResize til formens Resize-event
+            form.Resize += (sender, e) => AdjustForResize();
         }
 
         // Setup TextBox for displaying information
@@ -39,7 +45,7 @@ namespace SimpleGUIApp
                 Text = "Screen Output",
                 Font = new System.Drawing.Font("Consolas", 12),
                 Location = new System.Drawing.Point(50, 300),
-                Size = new System.Drawing.Size(500, 100)
+                Size = new System.Drawing.Size(form.ClientSize.Width - 100, 100)
             };
             form.Controls.Add(screenTextBox);
         }
@@ -60,17 +66,38 @@ namespace SimpleGUIApp
                 Location = new System.Drawing.Point(form.ClientSize.Width - 220, 10)
             };
 
-            // Dynamisk plassering ved resizing
-            form.Resize += (sender, e) =>
-            {
-                groupComboBox.Location = new System.Drawing.Point(form.ClientSize.Width - 220, 10);
-            };
-
-            groupComboBox.Items.Add("Group 1");
-            groupComboBox.Items.Add("Group 2");
-            groupComboBox.Items.Add("Group 3");
+            LoadGroupsFromJson(); // Laster inn grupper fra standard JSON-fil
 
             form.Controls.Add(groupComboBox);
+        }
+
+        // Load groups from a JSON file into the ComboBox
+        // Parameter "filePath" allows for a custom file path, defaulting to "groups.json"
+        public void LoadGroupsFromJson(string filePath = "groups.json")
+        {
+            try
+            {
+                if (!File.Exists(filePath))
+                {
+                    MessageBox.Show($"Filen ble ikke funnet: {filePath}");
+                    return;
+                }
+
+                string jsonData = File.ReadAllText(filePath);
+                List<Group> groups = JsonSerializer.Deserialize<List<Group>>(jsonData);
+
+                if (groups != null)
+                {
+                    foreach (var group in groups)
+                    {
+                        groupComboBox.Items.Add(group.GroupName); // Legger til GroupName i ComboBox
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Feil ved lasting av grupper fra JSON: {ex.Message}");
+            }
         }
 
         // Setup Button Group (Action buttons)
@@ -135,7 +162,6 @@ namespace SimpleGUIApp
             myTrackBar.Scroll += (sender, e) => 
             {
                 sliderLabel.Text = $"Slider value: {myTrackBar.Value}";
-               // UpdateScreen($"Slider value: {myTrackBar.Value}"); (Trenger ikke se slider-value på "Screen" for GUIen)
             };
             sliderGroup.Controls.Add(myTrackBar);
 
@@ -145,7 +171,7 @@ namespace SimpleGUIApp
         // Setup API buttons (GET and POST)
         private void SetupApiButtons()
         {
-            Button getRequestButton = new Button
+            getRequestButton = new Button
             {
                 Text = "GET Request",
                 Size = new System.Drawing.Size(100, 50),
@@ -158,7 +184,7 @@ namespace SimpleGUIApp
             };
             form.Controls.Add(getRequestButton);
 
-            Button postRequestButton = new Button
+            postRequestButton = new Button
             {
                 Text = "POST Request",
                 Size = new System.Drawing.Size(100, 50),
@@ -173,9 +199,36 @@ namespace SimpleGUIApp
             form.Controls.Add(postRequestButton);
         }
 
-        public void AdjustForResize(int formWidth)
+        // Dynamisk Resizing
+        private void AdjustForResize()
         {
+            int formWidth = form.ClientSize.Width;
+            int formHeight = form.ClientSize.Height;
+
             screenTextBox.Width = formWidth - 100;
+            groupComboBox.Location = new System.Drawing.Point(formWidth - groupComboBox.Width - 20, 10);
+
+            buttonGroup.Width = formWidth - 100;
+            sliderGroup.Width = formWidth - 100;
+
+            getRequestButton.Location = new System.Drawing.Point(50, formHeight - 120);
+            postRequestButton.Location = new System.Drawing.Point(200, formHeight - 120);
         }
+    }
+
+    // Modellklasser for JSON-dataene
+    public class Group
+    {
+        public int Id { get; set; }
+        public string GroupName { get; set; }
+        public List<Device> Devices { get; set; }
+    }
+
+    public class Device
+    {
+        public int Id { get; set; }
+        public string DeviceName { get; set; }
+        public string Type { get; set; }
+        public bool Status { get; set; }
     }
 }
