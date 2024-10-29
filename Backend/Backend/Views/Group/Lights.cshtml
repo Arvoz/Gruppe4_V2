@@ -1,0 +1,31 @@
+@model List<Backend.Core.Domain.Group>
+@{
+    ViewData["Title"] = "Lights";
+}
+
+@foreach(var group in Model)
+{
+    <div class="row">@group.GroupName
+        @foreach(var device in group.Devices)
+        {
+            @if (device.Status == false)
+            {
+                <div class="col-md-3">
+                    <img src="~/image/pic_bulboff.gif" alt="Light off">
+                    <p>@device.DeviceName</p>
+                </div>
+            }
+            @if (device.Status)
+            {
+                <div class="col-md-3">
+                    <img src="~/image/pic_bulbon.gif" alt="Light on">
+                    <p>@device.DeviceName</p>
+                </div>
+            }
+            
+            
+        }
+        
+    </div>
+}
+

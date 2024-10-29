@@ -80,6 +80,14 @@ namespace Backend.Controllers
         }
 
 
+        // Sette opp lys
+        public async Task<IActionResult> Lights(bool status)
+        {
+            var groups = await _groupService.GetAllGroupsAsync();
+            return View(groups);
+        }
+
+
         public async Task<IActionResult> GetData()
         {
             var group = await _groupService.GetAllGroupsAsync();
