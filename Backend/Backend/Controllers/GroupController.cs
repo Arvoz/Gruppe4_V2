@@ -87,6 +87,17 @@ namespace Backend.Controllers
             return View(groups);
         }
 
+        [HttpPost]
+        public async Task<IActionResult> LightsUpdate(int groupId, bool status)
+        {
+            if (groupId != null)
+            {
+                _groupService.UpdateStatusOnDevice(groupId, status);
+                return Ok("Lys endret!");
+            }
+            return BadRequest("Ingen grupper!");
+        }
+
 
         public async Task<IActionResult> GetData()
         {

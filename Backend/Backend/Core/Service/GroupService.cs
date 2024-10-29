@@ -49,5 +49,10 @@ namespace Backend.Core.Service
             await _groupRepository.DeleteGroupAsync(id);
         }
 
+        public async Task UpdateStatusOnDevice(int groupId, bool status)
+        {
+            await _groupRepository.UpdateGroup(groupId, status);
+        }
+
     }
 }

@@ -68,5 +68,20 @@ namespace Backend.Infrastructure.FileStorage
                 await _jsonFileHandler.SaveToFileAsync(groups);
             }
         }
+
+        public async Task UpdateGroup(int groupId, bool status)
+        {
+            var groups = await _jsonFileHandler.ReadFromFileAsync();
+            var group = groups.FirstOrDefault(g => g.Id == groupId);
+            if (group != null)
+            {
+                foreach(var device in group.Devices)
+                {
+                    device.UpdateStatus(status);
+                }
+                await _jsonFileHandler.SaveToFileAsync(groups);
+            }
+        }
+
     }
 }
