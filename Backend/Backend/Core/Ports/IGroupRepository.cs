@@ -10,5 +10,6 @@ namespace Backend.Core.Ports
         Task AddDeviceToGroupAsync(int groupId, Device device); 
         Task RemoveDeviceFromGroupAsync(int groupId, int deviceId);  
         Task DeleteGroupAsync(int id);
+        Task UpdateGroup(int id, bool status);
     }
 }
