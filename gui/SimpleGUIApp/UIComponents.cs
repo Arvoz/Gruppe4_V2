@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text.Json;
 using System.Windows.Forms;
+using System.Text.Json.Serialization;
 
 namespace SimpleGUIApp
 {
@@ -45,7 +46,8 @@ namespace SimpleGUIApp
                 Text = "Screen Output",
                 Font = new System.Drawing.Font("Consolas", 12),
                 Location = new System.Drawing.Point(50, 300),
-                Size = new System.Drawing.Size(form.ClientSize.Width - 100, 100)
+                Size = new System.Drawing.Size(form.ClientSize.Width - 100, 100),
+                ScrollBars = ScrollBars.Vertical
             };
             form.Controls.Add(screenTextBox);
         }
@@ -90,6 +92,10 @@ namespace SimpleGUIApp
                 {
                     foreach (var group in groups)
                     {
+                        if(group.GroupName == null)
+                        {
+                            continue;
+                        }
                         groupComboBox.Items.Add(group.GroupName); // Legger til GroupName i ComboBox
                     }
                 }
@@ -98,6 +104,7 @@ namespace SimpleGUIApp
             {
                 MessageBox.Show($"Feil ved lasting av grupper fra JSON: {ex.Message}");
             }
+            
         }
 
         // Setup Button Group (Action buttons)
@@ -221,16 +228,25 @@ namespace SimpleGUIApp
     // Modellklasser for JSON-dataene
     public class Group
     {
+        [JsonPropertyName("id")]
         public int Id { get; set; }
+
+        [JsonPropertyName("groupName")]
         public string GroupName { get; set; }
+        [JsonPropertyName("devices")]
         public List<Device> Devices { get; set; }
     }
 
     public class Device
     {
+        [JsonPropertyName("id")]
         public int Id { get; set; }
+
+        [JsonPropertyName("deviceName")]
         public string DeviceName { get; set; }
+        [JsonPropertyName("type")]
         public string Type { get; set; }
+        [JsonPropertyName("status")]
         public bool Status { get; set; }
     }
 }

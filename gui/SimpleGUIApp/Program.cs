@@ -9,6 +9,7 @@ namespace SimpleGUIApp
         [STAThread]
         static void Main()
         {
+            
             // Kjør manuelle tester i en separat tråd
             Thread testThread = new Thread(() =>
             {

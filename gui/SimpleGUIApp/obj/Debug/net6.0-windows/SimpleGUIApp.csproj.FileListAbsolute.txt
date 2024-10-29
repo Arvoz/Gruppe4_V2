@@ -57,7 +57,6 @@ M:\Gruppe4_v2\Gruppe4_V2\gui\SimpleGUIApp\bin\Debug\net6.0-windows\SimpleGUIApp.
 M:\Gruppe4_v2\Gruppe4_V2\gui\SimpleGUIApp\bin\Debug\net6.0-windows\SimpleGUIApp.deps.json
 M:\Gruppe4_v2\Gruppe4_V2\gui\SimpleGUIApp\bin\Debug\net6.0-windows\SimpleGUIApp.runtimeconfig.json
 M:\Gruppe4_v2\Gruppe4_V2\gui\SimpleGUIApp\bin\Debug\net6.0-windows\SimpleGUIApp.dll
-M:\Gruppe4_v2\Gruppe4_V2\gui\SimpleGUIApp\bin\Debug\net6.0-windows\ref\SimpleGUIApp.dll
 M:\Gruppe4_v2\Gruppe4_V2\gui\SimpleGUIApp\bin\Debug\net6.0-windows\SimpleGUIApp.pdb
 M:\Gruppe4_v2\Gruppe4_V2\gui\SimpleGUIApp\bin\Debug\net6.0-windows\Castle.Core.dll
 M:\Gruppe4_v2\Gruppe4_V2\gui\SimpleGUIApp\bin\Debug\net6.0-windows\Moq.dll
@@ -71,7 +70,6 @@ M:\Gruppe4_v2\Gruppe4_V2\gui\SimpleGUIApp\obj\Debug\net6.0-windows\SimpleGUIApp.
 M:\Gruppe4_v2\Gruppe4_V2\gui\SimpleGUIApp\obj\Debug\net6.0-windows\SimpleGUIApp.AssemblyInfoInputs.cache
 M:\Gruppe4_v2\Gruppe4_V2\gui\SimpleGUIApp\obj\Debug\net6.0-windows\SimpleGUIApp.AssemblyInfo.cs
 M:\Gruppe4_v2\Gruppe4_V2\gui\SimpleGUIApp\obj\Debug\net6.0-windows\SimpleGUIApp.csproj.CoreCompileInputs.cache
-M:\Gruppe4_v2\Gruppe4_V2\gui\SimpleGUIApp\obj\Debug\net6.0-windows\SimpleGUIApp.csproj.CopyComplete
 M:\Gruppe4_v2\Gruppe4_V2\gui\SimpleGUIApp\obj\Debug\net6.0-windows\SimpleGUIApp.dll
 M:\Gruppe4_v2\Gruppe4_V2\gui\SimpleGUIApp\obj\Debug\net6.0-windows\ref\SimpleGUIApp.dll
 M:\Gruppe4_v2\Gruppe4_V2\gui\SimpleGUIApp\obj\Debug\net6.0-windows\SimpleGUIApp.pdb
@@ -103,3 +101,6 @@ C:\Users\erlin\OneDrive\Dokumenter\GitHub\Gruppe4_V2\gui\SimpleGUIApp\obj\Debug\
 C:\Users\erlin\OneDrive\Dokumenter\GitHub\Gruppe4_V2\gui\SimpleGUIApp\obj\Debug\net6.0-windows\SimpleGUIApp.pdb
 C:\Users\erlin\OneDrive\Dokumenter\GitHub\Gruppe4_V2\gui\SimpleGUIApp\obj\Debug\net6.0-windows\SimpleGUIApp.genruntimeconfig.cache
 C:\Users\erlin\OneDrive\Dokumenter\GitHub\Gruppe4_V2\gui\SimpleGUIApp\obj\Debug\net6.0-windows\ref\SimpleGUIApp.dll
+M:\Gruppe4_v2\Gruppe4_V2\gui\SimpleGUIApp\obj\Debug\net6.0-windows\SimpleGUIApp.sourcelink.json
+M:\Gruppe4_v2\Gruppe4_V2\gui\SimpleGUIApp\obj\Debug\net6.0-windows\SimpleGU.1637C06B.Up2Date
+M:\Gruppe4_v2\Gruppe4_V2\gui\SimpleGUIApp\obj\Debug\net6.0-windows\refint\SimpleGUIApp.dll
