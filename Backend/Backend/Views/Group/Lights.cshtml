@@ -5,7 +5,8 @@
 
 @foreach(var group in Model)
 {
-    <div class="row">@group.GroupName
+    <div class="row">
+        <h1>@group.GroupName</h1>
         @foreach(var device in group.Devices)
         {
             @if (device.Status == false)
