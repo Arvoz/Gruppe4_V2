@@ -55,6 +55,7 @@ namespace SimpleGUIApp
         // Method to update the screen output
         public void UpdateScreen(string message)
         {
+
             screenTextBox.AppendText(Environment.NewLine + message);
         }
 
@@ -119,23 +120,44 @@ namespace SimpleGUIApp
 
             Button myButton = new Button
             {
-                Text = "First Button",
+                Text = "First Button(True)",
                 Size = new System.Drawing.Size(100, 50),
                 Location = new System.Drawing.Point(10, 30)
             };
-            myButton.Click += (sender, e) => UpdateScreen("First Button has been pressed");
+            myButton.Click += (sender, e) =>
+            {
+                SendBoolValue(true);
+                UpdateScreen("Light on");
+            };
+
             buttonGroup.Controls.Add(myButton);
 
             Button secondButton = new Button
             {
-                Text = "Second Button",
+                Text = "Second Button(False)",
                 Size = new System.Drawing.Size(100, 50),
                 Location = new System.Drawing.Point(150, 30)
             };
-            secondButton.Click += (sender, e) => UpdateScreen("Second Button has been pressed");
+            secondButton.Click += (sender, e) =>
+            {
+                SendBoolValue(false);
+                UpdateScreen("Light off");
+            };
             buttonGroup.Controls.Add(secondButton);
 
             form.Controls.Add(buttonGroup);
+        }
+
+        private async void SendBoolValue(bool value)
+        {
+            if (!int.TryParse(groupComboBox.Text, out int groupID))
+            {
+                groupID = 0; 
+            }
+            var content = (groupID, value);
+
+            string response = await new ApiHandler(form).SendPostRequest("http://localhost:5013/group/LightsUpdate", content.ToString());
+            UpdateScreen(response);
         }
 
         // Setup Slider Group
