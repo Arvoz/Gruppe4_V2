@@ -154,9 +154,13 @@ namespace SimpleGUIApp
             {
                 groupID = 0; 
             }
-            var content = (groupID, value);
+            // Id må endres, brukte 1 for å teste
+            var content = new { Id = 1, Status = value };
 
-            string response = await new ApiHandler(form).SendPostRequest("http://localhost:5013/group/LightsUpdate", content.ToString());
+            string jsonContent = JsonSerializer.Serialize(content);
+
+
+            string response = await new ApiHandler(form).SendPostRequest("http://localhost:5013/group/LightsUpdate", jsonContent);
             UpdateScreen(response);
         }
 

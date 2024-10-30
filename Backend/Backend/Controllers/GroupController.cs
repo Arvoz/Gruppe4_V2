@@ -1,5 +1,6 @@
 ﻿using Backend.Core.Domain;
 using Backend.Core.Ports;
+using Backend.Core.Dto;
 using Microsoft.AspNetCore.Mvc;
 using System.IO;
 using System.Threading.Tasks;
@@ -88,14 +89,19 @@ namespace Backend.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> LightsUpdate(int groupId, bool status)
+        public async Task<IActionResult> LightsUpdate([FromBody] GroupStatusUpdateDto groupDto)
         {
-            if (groupId != null)
-            {
-                _groupService.UpdateStatusOnDevice(groupId, status);
-                return Ok("Lys endret!");
-            }
-            return BadRequest("Ingen grupper!");
+            var group = await _groupService.GetGroupByIdAsync(groupDto.Id);
+
+            if (group == null)
+                return NotFound("Group not found " + groupDto.Id);
+
+            _groupService.UpdateStatusOnDevice(groupDto.Id, groupDto.Status);
+
+            if (groupDto == null)
+                return BadRequest(ModelState);
+
+            return Ok("Lys endrett!");
         }
 
 
