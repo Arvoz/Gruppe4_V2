@@ -93,19 +93,19 @@ namespace SimpleGUIApp
                 {
                     foreach (var group in groups)
                     {
-                        if(group.GroupName == null)
+                        if (group.GroupName != null)
                         {
-                            continue;
+                            groupComboBox.Items.Add(group); // Add the Group object directly
                         }
-                        groupComboBox.Items.Add(group.GroupName); // Legger til GroupName i ComboBox
                     }
+
+                    groupComboBox.DisplayMember = "GroupName"; // Show GroupName in ComboBox
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Feil ved lasting av grupper fra JSON: {ex.Message}");
             }
-            
         }
 
         // Setup Button Group (Action buttons)
@@ -150,19 +150,20 @@ namespace SimpleGUIApp
 
         private async void SendBoolValue(bool value)
         {
-            if (!int.TryParse(groupComboBox.Text, out int groupID))
+            if (groupComboBox.SelectedItem is Group selectedGroup)
             {
-                groupID = 0; 
+                var content = new { Id = selectedGroup.Id, Status = value };
+                string jsonContent = JsonSerializer.Serialize(content);
+
+                string response = await new ApiHandler(form).SendPostRequest("http://localhost:5013/group/LightsUpdate", jsonContent);
+                UpdateScreen(response);
             }
-            // Id må endres, brukte 1 for å teste
-            var content = new { Id = 1, Status = value };
-
-            string jsonContent = JsonSerializer.Serialize(content);
-
-
-            string response = await new ApiHandler(form).SendPostRequest("http://localhost:5013/group/LightsUpdate", jsonContent);
-            UpdateScreen(response);
+            else
+            {
+                MessageBox.Show("Please select a valid group.");
+            }
         }
+
 
         // Setup Slider Group
         private void SetupSliderGroup()
