@@ -11,6 +11,8 @@ using Microsoft.Extensions.Logging;
 
 namespace Backend.Controllers
 {
+    // [Route("/api/[controller]")]
+    // [ApiController]
     public class DeviceController : Controller
     {
         private readonly IDeviceService _deviceService;
@@ -26,7 +28,6 @@ namespace Backend.Controllers
             return View(devices);
         }
 
-        [HttpPost]
         public async Task<IActionResult> Add(Device device)
         {
             await _deviceService.AddDeviceAsync(device);
