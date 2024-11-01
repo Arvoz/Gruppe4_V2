@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "M:\\Gruppe4_v2\\Gruppe4_V2\\gui\\SimpleGUIApp\\SimpleGUIApp.csproj": {}
+    "C:\\Users\\sos_s\\Documents\\GitHub\\Gruppe4_V2\\gui\\SimpleGUIApp\\SimpleGUIApp.csproj": {}
   },
   "projects": {
-    "M:\\Gruppe4_v2\\Gruppe4_V2\\gui\\SimpleGUIApp\\SimpleGUIApp.csproj": {
+    "C:\\Users\\sos_s\\Documents\\GitHub\\Gruppe4_V2\\gui\\SimpleGUIApp\\SimpleGUIApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "M:\\Gruppe4_v2\\Gruppe4_V2\\gui\\SimpleGUIApp\\SimpleGUIApp.csproj",
+        "projectUniqueName": "C:\\Users\\sos_s\\Documents\\GitHub\\Gruppe4_V2\\gui\\SimpleGUIApp\\SimpleGUIApp.csproj",
         "projectName": "SimpleGUIApp",
-        "projectPath": "M:\\Gruppe4_v2\\Gruppe4_V2\\gui\\SimpleGUIApp\\SimpleGUIApp.csproj",
-        "packagesPath": "C:\\Users\\Stefan\\.nuget\\packages\\",
-        "outputPath": "M:\\Gruppe4_v2\\Gruppe4_V2\\gui\\SimpleGUIApp\\obj\\",
+        "projectPath": "C:\\Users\\sos_s\\Documents\\GitHub\\Gruppe4_V2\\gui\\SimpleGUIApp\\SimpleGUIApp.csproj",
+        "packagesPath": "C:\\Users\\sos_s\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\sos_s\\Documents\\GitHub\\Gruppe4_V2\\gui\\SimpleGUIApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Stefan\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\sos_s\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0-windows"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
