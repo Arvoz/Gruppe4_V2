@@ -10,11 +10,12 @@
 
         public void ChangeState(bool state)
         {
-            if (State)
-            {
-                State = false;
-            }
-            State = true;
+            State = state;
+        }
+
+        public void ChangePaired(bool state)
+        {
+            Paired = state;
         }
     }
 }

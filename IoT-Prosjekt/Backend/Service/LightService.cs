@@ -31,5 +31,10 @@ namespace Backend.Service
         {
             return _lightRepository.GetDeviceById(id);
         }
+
+        public async Task UpdateDevice(int id, bool paired)
+        {
+            await _lightRepository.UpdateDevice(id, paired);
+        }
     }
 }

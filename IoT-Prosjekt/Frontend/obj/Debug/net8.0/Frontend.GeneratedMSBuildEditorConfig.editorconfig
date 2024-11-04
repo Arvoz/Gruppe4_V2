@@ -18,6 +18,18 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\erlin\OneDrive\Dokumenter\Prosjekt_Gruppe4\Erling_Backend_V2\IoT-Prosjekt\Frontend
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/erlin/OneDrive/Dokumenter/Prosjekt_Gruppe4/Erling_Backend_V2/IoT-Prosjekt/Frontend/Views/Device/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGV2aWNlXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/erlin/OneDrive/Dokumenter/Prosjekt_Gruppe4/Erling_Backend_V2/IoT-Prosjekt/Frontend/Views/Group/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3JvdXBcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/erlin/OneDrive/Dokumenter/Prosjekt_Gruppe4/Erling_Backend_V2/IoT-Prosjekt/Frontend/Views/Group/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3JvdXBcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/erlin/OneDrive/Dokumenter/Prosjekt_Gruppe4/Erling_Backend_V2/IoT-Prosjekt/Frontend/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

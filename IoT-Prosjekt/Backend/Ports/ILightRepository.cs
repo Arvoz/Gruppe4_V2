@@ -8,5 +8,6 @@ namespace Backend.Ports
         Task<Light> GetDeviceById(int id);
         Task AddDevice(Light light);
         Task DeleteDevice(int id);
+        Task UpdateDevice(int id, bool paired);
     }
 }

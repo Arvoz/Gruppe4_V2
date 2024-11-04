@@ -16,18 +16,13 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Backend.Controllers.GroupController",
-    "Method": "CreateGroup",
-    "RelativePath": "api/v1/Group/createGroup",
+    "ContainingType": "Backend.Controllers.DeviceController",
+    "Method": "Add",
+    "RelativePath": "api/v1/Device/add",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
-      {
-        "Name": "groupName",
-        "Type": "System.String",
-        "IsRequired": false
-      },
       {
         "Name": "light",
         "Type": "Backend.Domain.Light",
@@ -37,19 +32,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Backend.Controllers.GroupController",
-    "Method": "GetAllGroups",
-    "RelativePath": "api/v1/Group/getAll",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Backend.Controllers.LightController",
+    "ContainingType": "Backend.Controllers.DeviceController",
     "Method": "DeleteById",
-    "RelativePath": "api/v1/Light/{id}/Delete",
+    "RelativePath": "api/v1/Device/delete/{id}",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -63,25 +48,72 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Backend.Controllers.LightController",
-    "Method": "Add",
-    "RelativePath": "api/v1/Light/add",
+    "ContainingType": "Backend.Controllers.DeviceController",
+    "Method": "GetAllDevices",
+    "RelativePath": "api/v1/Device/devices",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Backend.Controllers.DeviceController",
+    "Method": "UpadateDeviceStatus",
+    "RelativePath": "api/v1/Device/update/{id}",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "light",
-        "Type": "Backend.Domain.Light",
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "paired",
+        "Type": "System.Boolean",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Backend.Controllers.LightController",
-    "Method": "GetAllDevices",
-    "RelativePath": "api/v1/Light/devices",
+    "ContainingType": "Backend.Controllers.GroupController",
+    "Method": "CreateGroup",
+    "RelativePath": "api/v1/Group/createGroup",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Backend.Dto.CreateGroupDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Backend.Controllers.GroupController",
+    "Method": "DeleteGroup",
+    "RelativePath": "api/v1/Group/deleteGroup/{id}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Backend.Controllers.GroupController",
+    "Method": "GetAllGroups",
+    "RelativePath": "api/v1/Group/getAll",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
