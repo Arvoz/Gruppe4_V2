@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\erlin\\OneDrive\\Dokumenter\\Prosjekt_Gruppe4\\Erling_Backend_V2\\IoT-Prosjekt\\Tests\\Tests.csproj": {}
+    "C:\\Users\\erlin\\OneDrive\\Dokumenter\\GitHub\\Gruppe4_V2\\IoT-Prosjekt\\Tests\\Tests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\erlin\\OneDrive\\Dokumenter\\Prosjekt_Gruppe4\\Erling_Backend_V2\\IoT-Prosjekt\\Backend\\Backend.csproj": {
+    "C:\\Users\\erlin\\OneDrive\\Dokumenter\\GitHub\\Gruppe4_V2\\IoT-Prosjekt\\Backend\\Backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\erlin\\OneDrive\\Dokumenter\\Prosjekt_Gruppe4\\Erling_Backend_V2\\IoT-Prosjekt\\Backend\\Backend.csproj",
+        "projectUniqueName": "C:\\Users\\erlin\\OneDrive\\Dokumenter\\GitHub\\Gruppe4_V2\\IoT-Prosjekt\\Backend\\Backend.csproj",
         "projectName": "Backend",
-        "projectPath": "C:\\Users\\erlin\\OneDrive\\Dokumenter\\Prosjekt_Gruppe4\\Erling_Backend_V2\\IoT-Prosjekt\\Backend\\Backend.csproj",
+        "projectPath": "C:\\Users\\erlin\\OneDrive\\Dokumenter\\GitHub\\Gruppe4_V2\\IoT-Prosjekt\\Backend\\Backend.csproj",
         "packagesPath": "C:\\Users\\erlin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\erlin\\OneDrive\\Dokumenter\\Prosjekt_Gruppe4\\Erling_Backend_V2\\IoT-Prosjekt\\Backend\\obj\\",
+        "outputPath": "C:\\Users\\erlin\\OneDrive\\Dokumenter\\GitHub\\Gruppe4_V2\\IoT-Prosjekt\\Backend\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\erlin\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -74,14 +74,14 @@
         }
       }
     },
-    "C:\\Users\\erlin\\OneDrive\\Dokumenter\\Prosjekt_Gruppe4\\Erling_Backend_V2\\IoT-Prosjekt\\Frontend\\Frontend.csproj": {
+    "C:\\Users\\erlin\\OneDrive\\Dokumenter\\GitHub\\Gruppe4_V2\\IoT-Prosjekt\\Frontend\\Frontend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\erlin\\OneDrive\\Dokumenter\\Prosjekt_Gruppe4\\Erling_Backend_V2\\IoT-Prosjekt\\Frontend\\Frontend.csproj",
+        "projectUniqueName": "C:\\Users\\erlin\\OneDrive\\Dokumenter\\GitHub\\Gruppe4_V2\\IoT-Prosjekt\\Frontend\\Frontend.csproj",
         "projectName": "Frontend",
-        "projectPath": "C:\\Users\\erlin\\OneDrive\\Dokumenter\\Prosjekt_Gruppe4\\Erling_Backend_V2\\IoT-Prosjekt\\Frontend\\Frontend.csproj",
+        "projectPath": "C:\\Users\\erlin\\OneDrive\\Dokumenter\\GitHub\\Gruppe4_V2\\IoT-Prosjekt\\Frontend\\Frontend.csproj",
         "packagesPath": "C:\\Users\\erlin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\erlin\\OneDrive\\Dokumenter\\Prosjekt_Gruppe4\\Erling_Backend_V2\\IoT-Prosjekt\\Frontend\\obj\\",
+        "outputPath": "C:\\Users\\erlin\\OneDrive\\Dokumenter\\GitHub\\Gruppe4_V2\\IoT-Prosjekt\\Frontend\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\erlin\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -148,14 +148,14 @@
         }
       }
     },
-    "C:\\Users\\erlin\\OneDrive\\Dokumenter\\Prosjekt_Gruppe4\\Erling_Backend_V2\\IoT-Prosjekt\\Tests\\Tests.csproj": {
+    "C:\\Users\\erlin\\OneDrive\\Dokumenter\\GitHub\\Gruppe4_V2\\IoT-Prosjekt\\Tests\\Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\erlin\\OneDrive\\Dokumenter\\Prosjekt_Gruppe4\\Erling_Backend_V2\\IoT-Prosjekt\\Tests\\Tests.csproj",
+        "projectUniqueName": "C:\\Users\\erlin\\OneDrive\\Dokumenter\\GitHub\\Gruppe4_V2\\IoT-Prosjekt\\Tests\\Tests.csproj",
         "projectName": "Tests",
-        "projectPath": "C:\\Users\\erlin\\OneDrive\\Dokumenter\\Prosjekt_Gruppe4\\Erling_Backend_V2\\IoT-Prosjekt\\Tests\\Tests.csproj",
+        "projectPath": "C:\\Users\\erlin\\OneDrive\\Dokumenter\\GitHub\\Gruppe4_V2\\IoT-Prosjekt\\Tests\\Tests.csproj",
         "packagesPath": "C:\\Users\\erlin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\erlin\\OneDrive\\Dokumenter\\Prosjekt_Gruppe4\\Erling_Backend_V2\\IoT-Prosjekt\\Tests\\obj\\",
+        "outputPath": "C:\\Users\\erlin\\OneDrive\\Dokumenter\\GitHub\\Gruppe4_V2\\IoT-Prosjekt\\Tests\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\erlin\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -173,11 +173,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\erlin\\OneDrive\\Dokumenter\\Prosjekt_Gruppe4\\Erling_Backend_V2\\IoT-Prosjekt\\Backend\\Backend.csproj": {
-                "projectPath": "C:\\Users\\erlin\\OneDrive\\Dokumenter\\Prosjekt_Gruppe4\\Erling_Backend_V2\\IoT-Prosjekt\\Backend\\Backend.csproj"
+              "C:\\Users\\erlin\\OneDrive\\Dokumenter\\GitHub\\Gruppe4_V2\\IoT-Prosjekt\\Backend\\Backend.csproj": {
+                "projectPath": "C:\\Users\\erlin\\OneDrive\\Dokumenter\\GitHub\\Gruppe4_V2\\IoT-Prosjekt\\Backend\\Backend.csproj"
               },
-              "C:\\Users\\erlin\\OneDrive\\Dokumenter\\Prosjekt_Gruppe4\\Erling_Backend_V2\\IoT-Prosjekt\\Frontend\\Frontend.csproj": {
-                "projectPath": "C:\\Users\\erlin\\OneDrive\\Dokumenter\\Prosjekt_Gruppe4\\Erling_Backend_V2\\IoT-Prosjekt\\Frontend\\Frontend.csproj"
+              "C:\\Users\\erlin\\OneDrive\\Dokumenter\\GitHub\\Gruppe4_V2\\IoT-Prosjekt\\Frontend\\Frontend.csproj": {
+                "projectPath": "C:\\Users\\erlin\\OneDrive\\Dokumenter\\GitHub\\Gruppe4_V2\\IoT-Prosjekt\\Frontend\\Frontend.csproj"
               }
             }
           }

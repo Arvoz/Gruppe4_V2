@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\erlin\\OneDrive\\Dokumenter\\Prosjekt_Gruppe4\\Erling_Backend_V2\\IoT-Prosjekt\\Frontend\\Frontend.csproj": {}
+    "C:\\Users\\erlin\\OneDrive\\Dokumenter\\GitHub\\Gruppe4_V2\\IoT-Prosjekt\\Frontend\\Frontend.csproj": {}
   },
   "projects": {
-    "C:\\Users\\erlin\\OneDrive\\Dokumenter\\Prosjekt_Gruppe4\\Erling_Backend_V2\\IoT-Prosjekt\\Frontend\\Frontend.csproj": {
+    "C:\\Users\\erlin\\OneDrive\\Dokumenter\\GitHub\\Gruppe4_V2\\IoT-Prosjekt\\Frontend\\Frontend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\erlin\\OneDrive\\Dokumenter\\Prosjekt_Gruppe4\\Erling_Backend_V2\\IoT-Prosjekt\\Frontend\\Frontend.csproj",
+        "projectUniqueName": "C:\\Users\\erlin\\OneDrive\\Dokumenter\\GitHub\\Gruppe4_V2\\IoT-Prosjekt\\Frontend\\Frontend.csproj",
         "projectName": "Frontend",
-        "projectPath": "C:\\Users\\erlin\\OneDrive\\Dokumenter\\Prosjekt_Gruppe4\\Erling_Backend_V2\\IoT-Prosjekt\\Frontend\\Frontend.csproj",
+        "projectPath": "C:\\Users\\erlin\\OneDrive\\Dokumenter\\GitHub\\Gruppe4_V2\\IoT-Prosjekt\\Frontend\\Frontend.csproj",
         "packagesPath": "C:\\Users\\erlin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\erlin\\OneDrive\\Dokumenter\\Prosjekt_Gruppe4\\Erling_Backend_V2\\IoT-Prosjekt\\Frontend\\obj\\",
+        "outputPath": "C:\\Users\\erlin\\OneDrive\\Dokumenter\\GitHub\\Gruppe4_V2\\IoT-Prosjekt\\Frontend\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\erlin\\AppData\\Roaming\\NuGet\\NuGet.Config",

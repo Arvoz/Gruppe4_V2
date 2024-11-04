@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "v753p+JODb8=",
+  "dgSpecHash": "DcnwBdzOuOc=",
   "success": true,
-  "projectFilePath": "C:\\Users\\erlin\\OneDrive\\Dokumenter\\Prosjekt_Gruppe4\\Erling_Backend_V2\\IoT-Prosjekt\\Frontend\\Frontend.csproj",
+  "projectFilePath": "C:\\Users\\erlin\\OneDrive\\Dokumenter\\GitHub\\Gruppe4_V2\\IoT-Prosjekt\\Frontend\\Frontend.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\erlin\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.1\\microsoft.netcore.platforms.1.1.1.nupkg.sha512",
     "C:\\Users\\erlin\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",

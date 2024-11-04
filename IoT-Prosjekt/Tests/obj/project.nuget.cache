@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1A9CQ2FBVv8=",
+  "dgSpecHash": "gh8PTBofbtk=",
   "success": true,
-  "projectFilePath": "C:\\Users\\erlin\\OneDrive\\Dokumenter\\Prosjekt_Gruppe4\\Erling_Backend_V2\\IoT-Prosjekt\\Tests\\Tests.csproj",
+  "projectFilePath": "C:\\Users\\erlin\\OneDrive\\Dokumenter\\GitHub\\Gruppe4_V2\\IoT-Prosjekt\\Tests\\Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\erlin\\.nuget\\packages\\coverlet.collector\\6.0.0\\coverlet.collector.6.0.0.nupkg.sha512",
     "C:\\Users\\erlin\\.nuget\\packages\\microsoft.codecoverage\\17.8.0\\microsoft.codecoverage.17.8.0.nupkg.sha512",
