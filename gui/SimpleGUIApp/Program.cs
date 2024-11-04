@@ -11,12 +11,12 @@ namespace SimpleGUIApp
         {
             
             // Kjør manuelle tester i en separat tråd
-            Thread testThread = new Thread(() =>
-            {
-                SimpleGUIApp.Tests.ManualTests.RunTests();
-            });
-            testThread.Start();
-            testThread.Join();  // La testene kjøre ferdig før GUI starter
+            //Thread testThread = new Thread(() =>
+            //{
+            //    SimpleGUIApp.Tests.ManualTests.RunTests();
+            //});
+            //testThread.Start();
+            //testThread.Join();  // La testene kjøre ferdig før GUI starter
 
             // Start hovedprogrammet (GUI-applikasjonen)
             Application.EnableVisualStyles();
