@@ -126,8 +126,7 @@
               "RelativeToolTip": "Frontend\\Views\\Group\\Index.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-05T16:21:43.33Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-05T16:21:43.33Z"
             },
             {
               "$type": "Document",
@@ -139,8 +138,7 @@
               "RelativeToolTip": "Frontend\\Controllers\\DeviceController.cs",
               "ViewState": "AgIAABAAAAAAAAAAAAAgwDAAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T16:28:27.289Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-04T16:28:27.289Z"
             },
             {
               "$type": "Document",
@@ -152,8 +150,7 @@
               "RelativeToolTip": "Frontend\\Views\\Shared\\_Layout.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAACDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-04T16:25:06.149Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-04T16:25:06.149Z"
             },
             {
               "$type": "Document",
@@ -165,8 +162,7 @@
               "RelativeToolTip": "Frontend\\Controllers\\GroupController.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAAQwCgAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T16:02:33.9Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-04T16:02:33.9Z"
             },
             {
               "$type": "Document",
@@ -178,8 +174,7 @@
               "RelativeToolTip": "Backend\\Controllers\\GroupController.cs",
               "ViewState": "AgIAAA4AAAAAAAAAAAAQwE0AAABJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T15:57:40.013Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-04T15:57:40.013Z"
             },
             {
               "$type": "Document",
@@ -191,8 +186,7 @@
               "RelativeToolTip": "Frontend\\Views\\Group\\Create.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-04T16:02:27.418Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-04T16:02:27.418Z"
             },
             {
               "$type": "Document",
@@ -204,8 +198,7 @@
               "RelativeToolTip": "Frontend\\Services\\DeviceService.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAAQwCYAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-05T15:35:59.893Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-05T15:35:59.893Z"
             },
             {
               "$type": "Document",
@@ -217,8 +210,7 @@
               "RelativeToolTip": "Frontend\\Views\\Device\\CreateDevice.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-05T15:44:56.272Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-05T15:44:56.272Z"
             },
             {
               "$type": "Document",
@@ -230,8 +222,7 @@
               "RelativeToolTip": "Backend\\Ports\\ILightService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-05T14:30:46.073Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-05T14:30:46.073Z"
             },
             {
               "$type": "Document",
@@ -243,8 +234,7 @@
               "RelativeToolTip": "Backend\\Service\\LightService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-05T14:30:25.736Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-05T14:30:25.736Z"
             },
             {
               "$type": "Document",
@@ -256,8 +246,7 @@
               "RelativeToolTip": "Backend\\Ports\\ILightRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-05T14:27:10.675Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-05T14:27:10.675Z"
             },
             {
               "$type": "Document",
@@ -269,8 +258,7 @@
               "RelativeToolTip": "Backend\\Repository\\LightRepository.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAiwBEAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-05T14:27:55.971Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-05T14:27:55.971Z"
             },
             {
               "$type": "Document",
@@ -282,8 +270,7 @@
               "RelativeToolTip": "Backend\\Dto\\CreateGroupDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T17:24:28.232Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-04T17:24:28.232Z"
             },
             {
               "$type": "Document",
@@ -295,8 +282,7 @@
               "RelativeToolTip": "Backend\\Controllers\\DeviceController.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAwBYAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-05T14:24:03.478Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-05T14:24:03.478Z"
             },
             {
               "$type": "Document",
@@ -321,8 +307,7 @@
               "RelativeToolTip": "Backend\\Ports\\IGroupService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-05T15:00:37.539Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-05T15:00:37.539Z"
             },
             {
               "$type": "Document",
@@ -334,8 +319,7 @@
               "RelativeToolTip": "Frontend\\Services\\GroupService.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAAB4AAAB6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T16:33:46.761Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-04T16:33:46.761Z"
             },
             {
               "$type": "Document",
@@ -347,8 +331,7 @@
               "RelativeToolTip": "Frontend\\Dto\\CreateGroupDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T17:22:07.181Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-04T17:22:07.181Z"
             },
             {
               "$type": "Document",
@@ -360,8 +343,7 @@
               "RelativeToolTip": "Frontend\\Dto\\CreateDeviceDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-05T16:02:09.379Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-05T16:02:09.379Z"
             },
             {
               "$type": "Document",
@@ -373,8 +355,7 @@
               "RelativeToolTip": "Frontend\\Views\\Device\\LightSimulator.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-05T14:10:20.03Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-05T14:10:20.03Z"
             },
             {
               "$type": "Document",
@@ -386,8 +367,7 @@
               "RelativeToolTip": "Backend\\Domain\\Device.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-05T14:26:30.595Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-05T14:26:30.595Z"
             },
             {
               "$type": "Document",
@@ -399,8 +379,7 @@
               "RelativeToolTip": "Backend\\Dto\\CreateDeviceDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-05T15:58:42.435Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-05T15:58:42.435Z"
             },
             {
               "$type": "Document",
@@ -412,8 +391,7 @@
               "RelativeToolTip": "Backend\\Dto\\ChangeDeviceDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-05T14:32:11.501Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-05T14:32:11.501Z"
             },
             {
               "$type": "Document",
@@ -425,8 +403,7 @@
               "RelativeToolTip": "Backend\\Ports\\IGroupRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-05T14:37:47.205Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-05T14:37:47.205Z"
             },
             {
               "$type": "Document",
@@ -438,8 +415,7 @@
               "RelativeToolTip": "Backend\\Repository\\GroupRepository.cs",
               "ViewState": "AgIAACYAAAAAAAAAAAAwwFAAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-05T14:38:51.849Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-05T14:38:51.849Z"
             },
             {
               "$type": "Document",
@@ -451,8 +427,7 @@
               "RelativeToolTip": "Backend\\ApiKeys\\123_ApiKey.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-11-04T21:54:12.558Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-04T21:54:12.558Z"
             }
           ]
         }
