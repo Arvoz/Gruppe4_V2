@@ -15,8 +15,8 @@ namespace SimpleGUIApp
             {
                 SimpleGUIApp.Tests.ManualTests.RunTests();
             });
-            //testThread.Start();
-            //testThread.Join();  // La testene kjøre ferdig før GUI starter
+            testThread.Start();
+            testThread.Join();  // La testene kjøre ferdig før GUI starter
 
             // Start hovedprogrammet (GUI-applikasjonen)
             Application.EnableVisualStyles();
