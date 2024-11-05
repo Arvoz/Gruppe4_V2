@@ -69,13 +69,13 @@ namespace Backend.Controllers
         }
 
         [HttpPost("updateDevices")]
-        public async Task<IActionResult> UpdateDevices(int id, bool state)
+        public async Task<IActionResult> UpdateDevices([FromBody] ChangeDevicesFromGroupDto request)
         {
             var groups = await _groupService.GetAllGroups();
-            var group = groups.FirstOrDefault(g => g.Id == id);
+            var group = groups.FirstOrDefault(g => g.Id == request.Id);
             if (group != null)
             {
-                _lightService.UpdateLightFromGroup(group.Devices, state);
+                _lightService.UpdateLightFromGroup(group.Devices, request.State);
                 return Ok();
             }
             return BadRequest();

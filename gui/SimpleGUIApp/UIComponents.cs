@@ -93,13 +93,13 @@ namespace SimpleGUIApp
                 {
                     foreach (var group in groups)
                     {
-                        if (group.GroupName != null)
+                        if (group.Name != null)
                         {
                             groupComboBox.Items.Add(group); // Add the Group object directly
                         }
                     }
 
-                    groupComboBox.DisplayMember = "GroupName"; // Show GroupName in ComboBox
+                    groupComboBox.DisplayMember = "Name"; // Show GroupName in ComboBox
                 }
             }
             catch (Exception ex)
@@ -152,10 +152,10 @@ namespace SimpleGUIApp
         {
             if (groupComboBox.SelectedItem is Group selectedGroup)
             {
-                var content = new { Id = selectedGroup.Id, Status = value };
+                var content = new { Id = selectedGroup.Id, State = value };
                 string jsonContent = JsonSerializer.Serialize(content);
 
-                string response = await new ApiHandler(form).SendPostRequest("http://localhost:5013/group/LightsUpdate", jsonContent);
+                string response = await new ApiHandler(form).SendPostRequest("https://localhost:7136/api/v1/Group/updateDevices", jsonContent);
                 UpdateScreen(response);
             }
             else
@@ -213,7 +213,7 @@ namespace SimpleGUIApp
             };
             getRequestButton.Click += async (sender, e) => 
             {
-                string response = await new ApiHandler(form).SendGetRequest("http://localhost:5013/Group/GetData");
+                string response = await new ApiHandler(form).SendGetRequest("https://localhost:7136/api/v1/Group/getAll");
                 UpdateScreen("GET Response: " + response);
                 string jsonData = response;
                 File.WriteAllText("./groups.json", jsonData);
@@ -258,8 +258,8 @@ namespace SimpleGUIApp
         [JsonPropertyName("id")]
         public int Id { get; set; }
 
-        [JsonPropertyName("groupName")]
-        public string GroupName { get; set; }
+        [JsonPropertyName("name")]
+        public string Name { get; set; }
         [JsonPropertyName("devices")]
         public List<Device> Devices { get; set; }
     }
@@ -269,11 +269,15 @@ namespace SimpleGUIApp
         [JsonPropertyName("id")]
         public int Id { get; set; }
 
-        [JsonPropertyName("deviceName")]
-        public string DeviceName { get; set; }
+        [JsonPropertyName("name")]
+        public string Name { get; set; }
         [JsonPropertyName("type")]
         public string Type { get; set; }
         [JsonPropertyName("status")]
-        public bool Status { get; set; }
+        public bool State { get; set; }
+        [JsonPropertyName("paired")]
+        public bool Paired { get; set; }
+        
+        
     }
 }
