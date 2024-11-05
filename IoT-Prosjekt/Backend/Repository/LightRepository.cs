@@ -54,16 +54,40 @@ namespace Backend.Repository
             return devices.FirstOrDefault(d => d.Id == id);
         }
 
-        public async Task UpdateDevice(int id, bool paired)
+        public async Task UpdateDevicePaired(int id, bool state)
         {
             var filePath = GetFilePath();
             var devices = await _jsonFileHandler.ReadFromFileList(filePath);
             var device = devices.FirstOrDefault(d => d.Id == id);
             if (device != null)
             {
-                device.ChangePaired(paired);
+                device.ChangePaired(state);
                 await _jsonFileHandler.SaveToFileList(devices, filePath);
                 Console.WriteLine(device.Paired);
+            }
+        }
+
+        public async Task UpdateDevicesFromGroup(int id, bool paired)
+        {
+            var filePath = GetFilePath();
+            var devices = await _jsonFileHandler.ReadFromFileList(filePath);
+            var device = devices.FirstOrDefault(d => d.Id == id);
+            if (device != null)
+            {
+                device.ChangeOnOrOff(paired);
+                await _jsonFileHandler.SaveToFileList(devices, filePath);
+            }
+        }
+
+        public async Task UpdateDeviceState(int id, bool state)
+        {
+            var filePath = GetFilePath();
+            var devices = await _jsonFileHandler.ReadFromFileList(filePath);
+            var device = devices.FirstOrDefault(d => d.Id == id);
+            if (device != null)
+            {
+                device.ChangeOnOrOff(state);
+                await _jsonFileHandler.SaveToFileList(devices, filePath);
             }
         }
 

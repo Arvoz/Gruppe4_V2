@@ -13,6 +13,14 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\erlin\\OneDrive\\Dokumenter\\GitHub\\Gruppe4_V2\\IoT-Prosjekt\\Frontend\\wwwroot\\images\\pic_bulboff.gif",
+      "PackagePath": "staticwebassets\\images\\pic_bulboff.gif"
+    },
+    {
+      "Id": "C:\\Users\\erlin\\OneDrive\\Dokumenter\\GitHub\\Gruppe4_V2\\IoT-Prosjekt\\Frontend\\wwwroot\\images\\pic_bulbon.gif",
+      "PackagePath": "staticwebassets\\images\\pic_bulbon.gif"
+    },
+    {
       "Id": "C:\\Users\\erlin\\OneDrive\\Dokumenter\\GitHub\\Gruppe4_V2\\IoT-Prosjekt\\Frontend\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

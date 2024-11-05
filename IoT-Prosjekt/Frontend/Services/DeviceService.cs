@@ -1,4 +1,5 @@
-﻿using Frontend.Models;
+﻿using Backend.Dto;
+using Frontend.Models;
 using System.Net.Http.Json;
 using System.Text.Json;
 
@@ -23,7 +24,22 @@ namespace Frontend.Services
 
         public async Task UpdateDevicePaired(int id, bool paired)
         {
-            var response = await _httpClient.PostAsJsonAsync($"https://localhost:7136/api/v1/device/update/{id}", paired);
+            var response = await _httpClient.PostAsJsonAsync($"https://localhost:7136/api/v1/device/updatePaired/{id}", paired);
+
+            response.EnsureSuccessStatusCode();
+        }
+
+        public async Task CreateDevice(string name)
+        {
+            var request = new CreateDeviceDto()
+            {
+                Name = name,
+                State = false,
+                Paired = false,
+                Brightness = 100
+            };
+
+            var response = await _httpClient.PostAsJsonAsync("https://localhost:7136/api/v1/device/add", request);
 
             response.EnsureSuccessStatusCode();
         }

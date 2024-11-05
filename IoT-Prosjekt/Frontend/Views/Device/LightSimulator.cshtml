@@ -1,0 +1,22 @@
+﻿@model List<Device>
+@{
+    ViewData["Title"] = "Simulator";
+}
+
+@foreach (var device in Model)
+{
+    if (device.Paired)
+    {
+        if (device.State)
+        {
+            <h2>@device.Name</h2>
+            <img src="~/images/pic_bulbon.gif" alt="LightOn"/>
+        }
+
+        else
+        {
+            <h2>@device.Name</h2>
+            <img src="~/images/pic_bulboff.gif" alt="LightOff"/>
+        }
+    }
+}

@@ -8,14 +8,14 @@
         public bool State { get; set; }
         public bool Paired { get; set; }
 
-        public void ChangeState(bool state)
+        public void ChangeOnOrOff(bool state)
         {
             State = state;
         }
 
-        public void ChangePaired(bool state)
+        public void ChangePaired(bool paired)
         {
-            Paired = state;
+            Paired = paired;
         }
     }
 }

@@ -32,9 +32,22 @@ namespace Backend.Service
             return _lightRepository.GetDeviceById(id);
         }
 
-        public async Task UpdateDevice(int id, bool paired)
+        public async Task UpdateDevicePaired(int id, bool paired)
         {
-            await _lightRepository.UpdateDevice(id, paired);
+            await _lightRepository.UpdateDevicePaired(id, paired);
+        }
+
+        public async Task UpdateDeviceState(int id, bool state)
+        {
+            await _lightRepository.UpdateDeviceState(id, state);
+        }
+
+        public async Task UpdateLightFromGroup(List<Device> devices, bool state)
+        {
+            foreach (Device device in devices)
+            {
+                await _lightRepository.UpdateDevicesFromGroup(device.Id, state);
+            }
         }
     }
 }

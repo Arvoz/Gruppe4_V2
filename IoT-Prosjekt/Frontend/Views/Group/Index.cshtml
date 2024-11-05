@@ -5,6 +5,12 @@
 <ul>
     @foreach (var group in Model)
     {
-        <li>@group.Name</li>
+        <h2>@group.Name</h2>
+
+        @foreach  (var device in group.Devices)
+        {
+            <li>@device.Name</li>
+        }
+
     }
 </ul>

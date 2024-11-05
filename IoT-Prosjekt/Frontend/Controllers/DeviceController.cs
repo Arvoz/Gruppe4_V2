@@ -29,5 +29,24 @@ namespace Frontend.Controllers
             return RedirectToAction("Index");
         }
 
+        public async Task<IActionResult> LightSimulator()
+        {
+            List<Device> devices = await _deviceService.GetDevicesAsync();
+
+            return View(devices);
+        }
+
+        public async Task<IActionResult> CreateDevice()
+        {
+            return View();
+        }
+
+        public async Task<IActionResult> Create(string deviceName)
+        {
+            await _deviceService.CreateDevice(deviceName);
+
+            return RedirectToAction("Index");
+        }
+
     }
 }

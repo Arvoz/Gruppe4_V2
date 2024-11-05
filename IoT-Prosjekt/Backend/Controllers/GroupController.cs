@@ -1,6 +1,7 @@
 ﻿using Backend.Domain;
 using Backend.Dto;
 using Backend.Ports;
+using Backend.Service;
 using Microsoft.AspNetCore.Mvc;
 using System.Reflection.Metadata.Ecma335;
 
@@ -65,6 +66,20 @@ namespace Backend.Controllers
             }
 
             return BadRequest();
+        }
+
+        [HttpPost("updateDevices")]
+        public async Task<IActionResult> UpdateDevices(int id, bool state)
+        {
+            var groups = await _groupService.GetAllGroups();
+            var group = groups.FirstOrDefault(g => g.Id == id);
+            if (group != null)
+            {
+                _lightService.UpdateLightFromGroup(group.Devices, state);
+                return Ok();
+            }
+            return BadRequest();
+            
         }
         
     }
