@@ -155,7 +155,7 @@ namespace SimpleGUIApp
                 var content = new { Id = selectedGroup.Id, State = value };
                 string jsonContent = JsonSerializer.Serialize(content);
 
-                string response = await new ApiHandler(form).SendPostRequest("https://localhost:7136/api/v1/Group/updateDevices", jsonContent);
+                string response = await new ApiHandler(form).SendPostRequest("http://localhost:5048/api/v1/Group/updateDevices", jsonContent);
                 UpdateScreen(response);
             }
             else
@@ -213,7 +213,7 @@ namespace SimpleGUIApp
             };
             getRequestButton.Click += async (sender, e) => 
             {
-                string response = await new ApiHandler(form).SendGetRequest("https://localhost:7136/api/v1/Group/getAll");
+                string response = await new ApiHandler(form).SendGetRequest("http://localhost:5048/api/v1/Group/getAll");
                 UpdateScreen("GET Response: " + response);
                 string jsonData = response;
                 File.WriteAllText("./groups.json", jsonData);

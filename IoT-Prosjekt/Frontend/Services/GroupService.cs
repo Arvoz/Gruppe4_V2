@@ -7,6 +7,7 @@ namespace Frontend.Services
     public class GroupService
     {
         private readonly HttpClient _httpClient;
+        private readonly int _port = 5048;
 
         public GroupService(HttpClient httpClient)
         {
@@ -15,7 +16,7 @@ namespace Frontend.Services
 
         public async Task<List<Group>> GetGroupsAsync()
         {
-            var response = await _httpClient.GetAsync("https://localhost:7136/api/v1/group/getAll");
+            var response = await _httpClient.GetAsync($"http://localhost:{_port}/api/v1/group/getAll");
             response.EnsureSuccessStatusCode();
             var groups = await response.Content.ReadFromJsonAsync<List<Group>>();
             return groups;
@@ -28,7 +29,7 @@ namespace Frontend.Services
                 GroupName = groupName,
                 Id = deviceId
             };
-            var response = await _httpClient.PostAsJsonAsync(@"https://localhost:7136/api/v1/Group/createGroup", request);
+            var response = await _httpClient.PostAsJsonAsync($"http://localhost:{_port}/api/v1/Group/createGroup", request);
 
             response.EnsureSuccessStatusCode();
         }
