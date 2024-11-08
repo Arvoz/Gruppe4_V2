@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\erlin\\OneDrive\\Dokumenter\\GitHub\\Gruppe4_V2\\IoT-Prosjekt\\Frontend\\Frontend.csproj": {}
+    "C:\\Users\\sos_s\\Documents\\GitHub\\Gruppe4_V2\\IoT-Prosjekt\\Frontend\\Frontend.csproj": {}
   },
   "projects": {
-    "C:\\Users\\erlin\\OneDrive\\Dokumenter\\GitHub\\Gruppe4_V2\\IoT-Prosjekt\\Frontend\\Frontend.csproj": {
+    "C:\\Users\\sos_s\\Documents\\GitHub\\Gruppe4_V2\\IoT-Prosjekt\\Frontend\\Frontend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\erlin\\OneDrive\\Dokumenter\\GitHub\\Gruppe4_V2\\IoT-Prosjekt\\Frontend\\Frontend.csproj",
+        "projectUniqueName": "C:\\Users\\sos_s\\Documents\\GitHub\\Gruppe4_V2\\IoT-Prosjekt\\Frontend\\Frontend.csproj",
         "projectName": "Frontend",
-        "projectPath": "C:\\Users\\erlin\\OneDrive\\Dokumenter\\GitHub\\Gruppe4_V2\\IoT-Prosjekt\\Frontend\\Frontend.csproj",
-        "packagesPath": "C:\\Users\\erlin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\erlin\\OneDrive\\Dokumenter\\GitHub\\Gruppe4_V2\\IoT-Prosjekt\\Frontend\\obj\\",
+        "projectPath": "C:\\Users\\sos_s\\Documents\\GitHub\\Gruppe4_V2\\IoT-Prosjekt\\Frontend\\Frontend.csproj",
+        "packagesPath": "C:\\Users\\sos_s\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\sos_s\\Documents\\GitHub\\Gruppe4_V2\\IoT-Prosjekt\\Frontend\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\erlin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\sos_s\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

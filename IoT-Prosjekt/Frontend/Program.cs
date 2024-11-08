@@ -31,4 +31,4 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
-app.Run("http://0.0.0.0:5117");
+app.Run();
