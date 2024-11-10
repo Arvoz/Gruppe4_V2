@@ -25,7 +25,7 @@ namespace Frontend.Services
 
         public async Task UpdateDevicePaired(int id, bool paired)
         {
-            var response = await _httpClient.PostAsJsonAsync($"https://localhost:{_port}/api/v1/device/updatePaired/{id}", paired);
+            var response = await _httpClient.PostAsJsonAsync($"http://localhost:{_port}/api/v1/device/updatePaired/{id}", paired);
 
             response.EnsureSuccessStatusCode();
         }
@@ -40,7 +40,7 @@ namespace Frontend.Services
                 Brightness = 100
             };
 
-            var response = await _httpClient.PostAsJsonAsync($"https://localhost:{_port}/api/v1/device/add", request);
+            var response = await _httpClient.PostAsJsonAsync($"http://localhost:{_port}/api/v1/device/add", request);
 
             response.EnsureSuccessStatusCode();
         }
