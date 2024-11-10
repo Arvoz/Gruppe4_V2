@@ -6,6 +6,6 @@ namespace Backend.Ports
     {
         Task<ApiKey> CreateApiKey(string remoteId);
         Task DeleteApiKey(string remoteId);
-        bool CheckIfExisting(string remoteId);
+        Task<bool> CheckIfExisting(string remoteId);
     }
 }

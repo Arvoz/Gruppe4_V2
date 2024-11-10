@@ -24,7 +24,7 @@ namespace Frontend.Services.Tests
             var mockHttpMessageHandler = new Mock<HttpMessageHandler>();
             mockHttpMessageHandler.Protected()
 
-            // Configuring SendAsync method to return an http 200 response and a list of devices:
+            // Configuring SendAsync method to return an http 200 response and a list of devices in JSON format:
                 .Setup<Task<HttpResponseMessage>>(
                     "SendAsync",
                     ItExpr.IsAny<HttpRequestMessage>(),

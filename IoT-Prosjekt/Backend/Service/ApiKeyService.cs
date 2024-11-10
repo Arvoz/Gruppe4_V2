@@ -12,15 +12,11 @@ namespace Backend.Service
             _apiKeyRepository = apiKeyRepository;
         }
 
-        public bool CheckIfExisting(string remoteId)
-        {
-            var check = _apiKeyRepository.GetApiKeyByRemoteId(remoteId);
-            if (check != null)
-            {
-                return true;
-            }
-            return false;
-        }
+public async Task<bool> CheckIfExisting(string remoteId)
+{
+    var check = await _apiKeyRepository.GetApiKeyByRemoteId(remoteId);
+    return check != null;
+}
 
         public async Task<ApiKey> CreateApiKey(string remoteId)
         {

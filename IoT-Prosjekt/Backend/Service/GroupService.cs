@@ -40,7 +40,7 @@ namespace Backend.Service
         public async Task<Group> GetGroupByName(string groupName)
         {
             var group = await _groupRepository.GetAllGroups();
-            return group.FirstOrDefault(g => g.Name == groupName) ?? new Group();
+            return group.FirstOrDefault(g => g.Name == groupName);
         }
 
         public async Task RemoveDeviceFromGroup(int groupId, int deviceId)

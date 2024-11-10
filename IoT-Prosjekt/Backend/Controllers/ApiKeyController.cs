@@ -17,7 +17,7 @@ namespace Backend.Controllers
         [HttpPost("{remoteId}/register")]
         public async Task<IActionResult> RegisterNewRemote(string remoteId)
         {
-            var check = _apiKeyService.CheckIfExisting(remoteId);
+            var check = await _apiKeyService.CheckIfExisting(remoteId);
 
             if (check == false)
             {

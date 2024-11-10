@@ -1,55 +1,111 @@
-using Frontend.Models;
+using Backend.Domain;
+using Backend.Ports;
+using Backend.Service;
 using Moq;
-using Moq.Protected;
 using System.Collections.Generic;
-using System.Net;
-using System.Net.Http;
-using System.Net.Http.Json;
-using System.Threading;
+using System.Linq;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace Frontend.Services.Tests
+namespace Backend.Tests.Service
 {
-    public class GroupServiceTest
+    public class GroupServiceTests
     {
-        // This test is basically the same as the one for the DeviceService.
+        private readonly Mock<IGroupRepository> _groupRepositoryMock;
+        private readonly GroupService _groupService;
+
+        public GroupServiceTests()
+        {
+            _groupRepositoryMock = new Mock<IGroupRepository>();
+            _groupService = new GroupService(_groupRepositoryMock.Object);
+        }
+
+
         [Fact]
-        public async Task GetGroupsAsync_ReturnsGroupsList()
+        public async Task GetAllGroups_ShouldReturnAllGroups()
         {
             // Arrange
-
-            // Mocking http client:
-            var mockHttpMessageHandler = new Mock<HttpMessageHandler>();
-            mockHttpMessageHandler.Protected()
-
-            // Configuring SendAsync method to return an http 200 response and a list of devices:
-                .Setup<Task<HttpResponseMessage>>(
-                    "SendAsync",
-                    ItExpr.IsAny<HttpRequestMessage>(),
-                    ItExpr.IsAny<CancellationToken>()
-                )
-                .ReturnsAsync(new HttpResponseMessage
-                {
-                    StatusCode = HttpStatusCode.OK,
-                    Content = JsonContent.Create(new List<Group>
-                    {
-                        new Group { Name = "Group1" },
-                        new Group { Name = "Group2" }
-                    })
-                });
-
-            var httpClient = new HttpClient(mockHttpMessageHandler.Object);
-            var groupService = new GroupService(httpClient);
+            var mockGroups = new List<Group>
+            {
+                new Group { Id = 1, Name = "Group1" },
+                new Group { Id = 2, Name = "Group2" }
+            };
+            _groupRepositoryMock.Setup(repo => repo.GetAllGroups()).ReturnsAsync(mockGroups);
 
             // Act
-            var devices = await groupService.GetGroupsAsync();
+            var result = await _groupService.GetAllGroups();
 
             // Assert
-            Assert.NotNull(devices);
-            Assert.Equal(2, devices.Count);
-            Assert.Equal("Group1", devices[0].Name);
-            Assert.Equal("Group2", devices[1].Name);
+            Assert.Equal(2, result.Count);
+            Assert.Equal("Group1", result[0].Name);
+            Assert.Equal("Group2", result[1].Name);
         }
+
+        [Fact]
+        public async Task GetGroupById_ShouldReturnGroup_WhenGroupExists()
+        {
+            // Arrange
+            var mockGroup = new Group { Id = 1, Name = "Group1" };
+            _groupRepositoryMock.Setup(repo => repo.GetGroupById(1)).ReturnsAsync(mockGroup);
+
+            // Act
+            var result = await _groupService.GetGroupById(1);
+
+            // Assert
+            Assert.NotNull(result);
+            Assert.Equal(1, result.Id);
+            Assert.Equal("Group1", result.Name);
+        }
+
+        [Fact]
+        public async Task GetGroupById_ShouldReturnNull_WhenGroupDoesNotExist()
+        {
+            // Arrange
+            _groupRepositoryMock.Setup(repo => repo.GetGroupById(1)).ReturnsAsync((Group)null);
+
+            // Act
+            var result = await _groupService.GetGroupById(1);
+
+            // Assert
+            Assert.Null(result);
+        }
+
+        [Fact]
+        public async Task GetGroupByName_ShouldReturnGroup_WhenGroupExists()
+        {
+            // Arrange
+            var mockGroups = new List<Group>
+            {
+                new Group { Id = 1, Name = "Group1" },
+                new Group { Id = 2, Name = "Group2" }
+            };
+            _groupRepositoryMock.Setup(repo => repo.GetAllGroups()).ReturnsAsync(mockGroups);
+
+            // Act
+            var result = await _groupService.GetGroupByName("Group1");
+
+            // Assert
+            Assert.NotNull(result);
+            Assert.Equal(1, result.Id);
+            Assert.Equal("Group1", result.Name);
+        }
+
+        [Fact]
+        public async Task GetGroupByName_ShouldReturnNull_WhenGroupDoesNotExist()
+        {
+            // Arrange
+            var mockGroups = new List<Group>
+            {
+                new Group { Id = 1, Name = "Group1" },
+                new Group { Id = 2, Name = "Group2" }
+            };
+            _groupRepositoryMock.Setup(repo => repo.GetAllGroups()).ReturnsAsync(mockGroups);
+
+            // Act
+            var result = await _groupService.GetGroupByName("Group3");
+
+            // Assert
+            Assert.Null(result);
+        }        
     }
 }
