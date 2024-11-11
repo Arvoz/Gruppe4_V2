@@ -1,15 +1,9 @@
 
 /gui/SimpleGUIApp/bin
 /gui/SimpleGUIApp/obj
-/Backend/Backend/bin
-/Backend/Tests/bin
-/Backend/Tests/obj
-/Backend/Backend/obj
-/IoT-Prosjekt/Backend/bin
 /IoT-Prosjekt/Backend/bin
 /IoT-Prosjekt/Backend/obj
 /IoT-Prosjekt/Frontend/bin
 /IoT-Prosjekt/Frontend/obj
-/IoT-Prosjekt/Backend/bin
-/IoT-Prosjekt/Backend/obj
-/IoT-Prosjekt/Backend/obj
+/IoT-Prosjekt/Tests/bin
+/IoT-Prosjekt/Tests/obj
