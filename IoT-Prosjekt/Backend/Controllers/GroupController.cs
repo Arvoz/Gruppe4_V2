@@ -57,7 +57,7 @@ namespace Backend.Controllers
         [HttpPost("deleteGroup/{id}")]
         public async Task<IActionResult> DeleteGroup(int id)
         {
-            var group = _groupService.GetGroupById(id);
+            var group = await _groupService.GetGroupById(id);
 
             if (group != null)
             {

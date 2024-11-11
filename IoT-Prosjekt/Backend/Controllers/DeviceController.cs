@@ -43,9 +43,9 @@ namespace Backend.Controllers
         }
 
         [HttpPost("updatePaired/{id}")]
-        public async Task<IActionResult> UpadateDevicePaired(int id, [FromBody] bool paired)
+        public async Task<IActionResult> UpdateDevicePaired(int id, [FromBody] bool paired)
         {
-            var check = _lightService.GetDeviceById(id);
+            var check = await _lightService.GetDeviceById(id);
             if (check != null)
             {
                 await _lightService.UpdateDevicePaired(id, paired);
@@ -57,7 +57,7 @@ namespace Backend.Controllers
         [HttpPost("updateState/{id}")]
         public async Task<IActionResult> UpdateDeviceState(int id, [FromBody] bool state)
         {
-            var check = _lightService.GetDeviceById(id);
+            var check = await _lightService.GetDeviceById(id);
             if (check != null)
             {
                 await _lightService.UpdateDeviceState(id, state);

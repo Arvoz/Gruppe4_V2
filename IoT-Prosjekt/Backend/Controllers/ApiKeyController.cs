@@ -19,11 +19,11 @@ namespace Backend.Controllers
         {
             var check = await _apiKeyService.CheckIfExisting(remoteId);
 
-            if (check == false)
+            if (check == true)
             {
                 return BadRequest("Allerede registrert");
             }
-            var apiKey = _apiKeyService.CreateApiKey(remoteId);
+            var apiKey = await _apiKeyService.CreateApiKey(remoteId);
             return Ok(apiKey);
         }
 

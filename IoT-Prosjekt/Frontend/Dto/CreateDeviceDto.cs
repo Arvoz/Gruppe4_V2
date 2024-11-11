@@ -1,4 +1,4 @@
-﻿namespace Backend.Dto
+﻿namespace Frontend.Dto
 {
     public class CreateDeviceDto
     {
