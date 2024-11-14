@@ -20,3 +20,23 @@
         }
     }
 }
+
+<script>
+    // Definerer variabler for antall oppdateringer og intervaller
+    let refreshCount = 0;
+    const maxRefreshes = 100; // Hvor mange ganger siden skal oppdateres
+    const refreshInterval = 1000; // Oppdateringsintervall i millisekunder (5000 ms = 5 sekunder)
+
+    // Funksjon for å oppdatere siden
+    function refreshPage() {
+        if (refreshCount < maxRefreshes) {
+            refreshCount++;
+            location.reload(); // Oppdaterer hele siden
+        } else {
+            clearInterval(refreshTimer); // Stopper oppdateringen etter x ganger
+        }
+    }
+
+    // Start tidsstyrt oppdatering av siden
+    const refreshTimer = setInterval(refreshPage, refreshInterval);
+</script>
