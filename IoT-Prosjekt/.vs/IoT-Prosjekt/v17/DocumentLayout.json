@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\erlin\\OneDrive\\Dokumenter\\GitHub\\Gruppe4_V2\\IoT-Prosjekt\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{F7F33836-856A-43E4-8D5C-2B1EC3691B67}|Backend\\Backend.csproj|c:\\users\\erlin\\onedrive\\dokumenter\\github\\gruppe4_v2\\iot-prosjekt\\backend\\dto\\changedevicesfromgroupdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F7F33836-856A-43E4-8D5C-2B1EC3691B67}|Backend\\Backend.csproj|solutionrelative:backend\\dto\\changedevicesfromgroupdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F7F33836-856A-43E4-8D5C-2B1EC3691B67}|Backend\\Backend.csproj|c:\\users\\erlin\\onedrive\\dokumenter\\github\\gruppe4_v2\\iot-prosjekt\\backend\\controllers\\groupcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F7F33836-856A-43E4-8D5C-2B1EC3691B67}|Backend\\Backend.csproj|solutionrelative:backend\\controllers\\groupcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BDEFD2F2-5685-4B04-920F-4CD5BDF5B970}|Frontend\\Frontend.csproj|c:\\users\\erlin\\onedrive\\dokumenter\\github\\gruppe4_v2\\iot-prosjekt\\frontend\\services\\groupservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BDEFD2F2-5685-4B04-920F-4CD5BDF5B970}|Frontend\\Frontend.csproj|solutionrelative:frontend\\services\\groupservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F7F33836-856A-43E4-8D5C-2B1EC3691B67}|Backend\\Backend.csproj|c:\\users\\erlin\\onedrive\\dokumenter\\github\\gruppe4_v2\\iot-prosjekt\\backend\\dto\\changedevicesfromgroupdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F7F33836-856A-43E4-8D5C-2B1EC3691B67}|Backend\\Backend.csproj|solutionrelative:backend\\dto\\changedevicesfromgroupdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F7F33836-856A-43E4-8D5C-2B1EC3691B67}|Backend\\Backend.csproj|c:\\users\\erlin\\onedrive\\dokumenter\\github\\gruppe4_v2\\iot-prosjekt\\backend\\service\\groupservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -118,17 +118,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "ChangeDevicesFromGroupDto.cs",
               "DocumentMoniker": "C:\\Users\\erlin\\OneDrive\\Dokumenter\\GitHub\\Gruppe4_V2\\IoT-Prosjekt\\Backend\\Dto\\ChangeDevicesFromGroupDto.cs",
               "RelativeDocumentMoniker": "Backend\\Dto\\ChangeDevicesFromGroupDto.cs",
               "ToolTip": "C:\\Users\\erlin\\OneDrive\\Dokumenter\\GitHub\\Gruppe4_V2\\IoT-Prosjekt\\Backend\\Dto\\ChangeDevicesFromGroupDto.cs",
               "RelativeToolTip": "Backend\\Dto\\ChangeDevicesFromGroupDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-05T16:39:48.612Z",
               "EditorCaption": ""
@@ -183,16 +183,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "GroupController.cs",
               "DocumentMoniker": "C:\\Users\\erlin\\OneDrive\\Dokumenter\\GitHub\\Gruppe4_V2\\IoT-Prosjekt\\Backend\\Controllers\\GroupController.cs",
               "RelativeDocumentMoniker": "Backend\\Controllers\\GroupController.cs",
               "ToolTip": "C:\\Users\\erlin\\OneDrive\\Dokumenter\\GitHub\\Gruppe4_V2\\IoT-Prosjekt\\Backend\\Controllers\\GroupController.cs",
               "RelativeToolTip": "Backend\\Controllers\\GroupController.cs",
-              "ViewState": "AgIAADMAAAAAAAAAAAAowFIAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAADQAAAAAAAAAAAAgwEUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T15:57:40.013Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-04T15:57:40.013Z"
             },
             {
               "$type": "Document",
@@ -292,7 +291,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "GroupService.cs",
               "DocumentMoniker": "C:\\Users\\erlin\\OneDrive\\Dokumenter\\GitHub\\Gruppe4_V2\\IoT-Prosjekt\\Frontend\\Services\\GroupService.cs",
               "RelativeDocumentMoniker": "Frontend\\Services\\GroupService.cs",
@@ -300,8 +299,7 @@
               "RelativeToolTip": "Frontend\\Services\\GroupService.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAqwB4AAABiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T16:33:46.761Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-04T16:33:46.761Z"
             },
             {
               "$type": "Document",
@@ -325,8 +323,7 @@
               "RelativeToolTip": "Backend\\Service\\GroupService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-05T16:19:11.516Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-05T16:19:11.516Z"
             },
             {
               "$type": "Document",
@@ -447,6 +444,10 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2024-11-04T21:54:12.558Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             }
           ]
         }
