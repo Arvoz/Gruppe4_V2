@@ -120,7 +120,7 @@ namespace SimpleGUIApp
 
             Button myButton = new Button
             {
-                Text = "First Button(True)",
+                Text = "På",
                 Size = new System.Drawing.Size(100, 50),
                 Location = new System.Drawing.Point(10, 30)
             };
@@ -134,7 +134,7 @@ namespace SimpleGUIApp
 
             Button secondButton = new Button
             {
-                Text = "Second Button(False)",
+                Text = "Av",
                 Size = new System.Drawing.Size(100, 50),
                 Location = new System.Drawing.Point(150, 30)
             };
