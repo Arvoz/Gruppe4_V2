@@ -55,7 +55,6 @@ namespace SimpleGUIApp
         // Method to update the screen output
         public void UpdateScreen(string message)
         {
-
             screenTextBox.AppendText(Environment.NewLine + message);
         }
 
@@ -75,7 +74,6 @@ namespace SimpleGUIApp
         }
 
         // Load groups from a JSON file into the ComboBox
-        // Parameter "filePath" allows for a custom file path, defaulting to "groups.json"
         public void LoadGroupsFromJson(string filePath = "groups.json")
         {
             try
@@ -91,15 +89,17 @@ namespace SimpleGUIApp
 
                 if (groups != null)
                 {
+                    groupComboBox.Items.Clear(); // Fjern tidligere elementer
                     foreach (var group in groups)
                     {
                         if (group.Name != null)
                         {
-                            groupComboBox.Items.Add(group); // Add the Group object directly
+                            groupComboBox.Items.Add(group); // Legg til ny gruppe
+                            Console.WriteLine($"Lagt til gruppe: {group.Name}");
                         }
                     }
 
-                    groupComboBox.DisplayMember = "Name"; // Show GroupName in ComboBox
+                    groupComboBox.DisplayMember = "Name"; // Vis gruppe-navn i dropdown
                 }
             }
             catch (Exception ex)
@@ -164,7 +164,6 @@ namespace SimpleGUIApp
             }
         }
 
-
         // Setup Slider Group
         private void SetupSliderGroup()
         {
@@ -193,7 +192,7 @@ namespace SimpleGUIApp
                 Size = new System.Drawing.Size(300, 45),
                 Location = new System.Drawing.Point(10, 50)
             };
-            myTrackBar.Scroll += (sender, e) => 
+            myTrackBar.Scroll += (sender, e) =>
             {
                 sliderLabel.Text = $"Slider value: {myTrackBar.Value}";
             };
@@ -211,12 +210,12 @@ namespace SimpleGUIApp
                 Size = new System.Drawing.Size(100, 50),
                 Location = new System.Drawing.Point(50, 450)
             };
-            getRequestButton.Click += async (sender, e) => 
+            getRequestButton.Click += async (sender, e) =>
             {
                 string response = await new ApiHandler(form).SendGetRequest("http://localhost:5048/api/v1/Group/getAll");
                 UpdateScreen("GET Response: " + response);
-                string jsonData = response;
-                File.WriteAllText("./groups.json", jsonData);
+                File.WriteAllText("./groups.json", response);
+                LoadGroupsFromJson("./groups.json"); // Oppdater gruppelisten
             };
             form.Controls.Add(getRequestButton);
 
@@ -226,11 +225,15 @@ namespace SimpleGUIApp
                 Size = new System.Drawing.Size(100, 50),
                 Location = new System.Drawing.Point(200, 450)
             };
-            postRequestButton.Click += async (sender, e) => 
+            postRequestButton.Click += async (sender, e) =>
             {
-                // string jsonData = "{ \"title\": \"foo\", \"body\": \"bar\", \"userId\": 1 }";
                 string response = await new ApiHandler(form).SendPostRequest("http://localhost:5013/group/PostFromGui", "Hello from GUI");
                 UpdateScreen("POST Response: " + response);
+
+                // Oppdater gruppene etter POST
+                string getResponse = await new ApiHandler(form).SendGetRequest("http://localhost:5048/api/v1/Group/getAll");
+                File.WriteAllText("./groups.json", getResponse);
+                LoadGroupsFromJson("./groups.json");
             };
             form.Controls.Add(postRequestButton);
         }
@@ -260,6 +263,7 @@ namespace SimpleGUIApp
 
         [JsonPropertyName("name")]
         public string Name { get; set; }
+
         [JsonPropertyName("devices")]
         public List<Device> Devices { get; set; }
     }
@@ -271,13 +275,14 @@ namespace SimpleGUIApp
 
         [JsonPropertyName("name")]
         public string Name { get; set; }
+
         [JsonPropertyName("type")]
         public string Type { get; set; }
+
         [JsonPropertyName("status")]
         public bool State { get; set; }
+
         [JsonPropertyName("paired")]
         public bool Paired { get; set; }
-        
-        
     }
 }
