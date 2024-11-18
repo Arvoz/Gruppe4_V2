@@ -47,5 +47,15 @@ namespace Backend.Service
         {
             await _groupRepository.RemoveDeviceFromGroup(groupId, deviceId);
         }
+
+        public async Task UpdateGroupDevice(int groupId, bool state)
+        {
+            var group = await _groupRepository.GetGroupById(groupId);
+            foreach (var device in group.Devices)
+            {
+                await _groupRepository.UpdateGroup(groupId, device.Id, state);
+            }
+        }
+        
     }
 }

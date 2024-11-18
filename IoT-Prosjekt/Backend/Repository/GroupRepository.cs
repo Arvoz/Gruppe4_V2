@@ -80,6 +80,22 @@ namespace Backend.Repository
             }
         }
 
+        public async Task UpdateGroup(int groupId, int deviceId, bool state)
+        {
+            var filePath = GetFilePath();
+            var groups = await _jsonFileHandler.ReadFromFileList(filePath);
+            var group = groups.FirstOrDefault(g => g.Id == groupId);
+            if (group != null)
+            {
+                var deviceToUpdate = group.Devices.FirstOrDefault(d => d.Id == deviceId);
+                if (deviceToUpdate != null)
+                {
+                    deviceToUpdate.ChangeOnOrOff(state);
+                    await _jsonFileHandler.SaveToFileList(groups, filePath);
+                }
+            }
+        }
+        
         private string GetFilePath()
         {
             return Path.Combine(_directoryPath, $"group.json");

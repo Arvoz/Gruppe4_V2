@@ -10,5 +10,6 @@ namespace Backend.Ports
         Task AddDeviceToGroup(int groupId, Device device);
         Task RemoveDeviceFromGroup(int groupId, int deviceId);
         Task DeleteGroup(int groupId);
+        Task UpdateGroup(int groupId, int deviceId, bool state);
     }
 }

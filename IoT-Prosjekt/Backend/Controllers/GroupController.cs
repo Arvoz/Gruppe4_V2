@@ -76,6 +76,7 @@ namespace Backend.Controllers
             if (group != null)
             {
                 _lightService.UpdateLightFromGroup(group.Devices, request.State);
+                _groupService.UpdateGroupDevice(group.Id, request.State);
                 return Ok();
             }
             return BadRequest();
