@@ -67,5 +67,77 @@ namespace Backend.Tests.Service
             // Assert
             Assert.Null(result);
         }
+
+
+        // Integration tests:
+        [Fact]
+        public async Task AddDevice_ShouldCallRepositoryAddDevice()
+        {
+            // Arrange
+            var Light = new Light { Name = "Light" };
+
+            // Act
+            await _lightService.AddDevice(Light);
+
+            // Assert
+            _lightRepositoryMock.Verify(repo => repo.AddDevice(Light), Times.Once);
+        }
+
+        [Fact]
+        public async Task DeleteDevice_ShouldCallRepositoryDeleteDevice()
+        {
+            // Arrange
+            var lightId = 1;
+
+            // Act
+            await _lightService.DeleteDevice(lightId);
+
+            // Assert
+            _lightRepositoryMock.Verify(repo => repo.DeleteDevice(lightId), Times.Once);
+        }
+
+        [Fact]
+        public async Task UpdateDevicePaired_ShouldCallRepositoryUpdateDevicePaired()
+        {
+            // Arrange
+            var lightId = 1;
+            var paired = true;
+
+            // Act
+            await _lightService.UpdateDevicePaired(lightId, paired);
+
+            // Assert
+            _lightRepositoryMock.Verify(repo => repo.UpdateDevicePaired(lightId, paired), Times.Once);
+        }
+
+        [Fact]
+        public async Task UpdateDeviceState_ShouldCallRepositoryUpdateDeviceState()
+        {
+            // Arrange
+            var lightId = 1;
+            var state = true;
+
+            // Act
+            await _lightService.UpdateDeviceState(lightId, state);
+
+            // Assert
+            _lightRepositoryMock.Verify(repo => repo.UpdateDeviceState(lightId, state), Times.Once);
+        }
+
+        [Fact]
+        public async Task UpdateLightFromGroup_ShouldUpdateAllDevicesInGroup()
+        {
+            // Arrange
+            var device1 = new Device { Id = 1, Name = "Device1", State = false };
+            var device2 = new Device { Id = 2, Name = "Device2", State = false };
+            var devices = new List<Device> { device1, device2 };
+
+            // Act
+            await _lightService.UpdateLightFromGroup(devices, true);
+
+            // Assert
+            _lightRepositoryMock.Verify(repo => repo.UpdateDevicesFromGroup(device1.Id, true), Times.Once);
+            _lightRepositoryMock.Verify(repo => repo.UpdateDevicesFromGroup(device2.Id, true), Times.Once);
+        }
     }
 }

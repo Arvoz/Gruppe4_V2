@@ -3,7 +3,6 @@ using Frontend.Services;
 using Moq;
 using Moq.Protected;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Net;
 using System.Net.Http;
 using System.Net.Http.Json;
@@ -11,7 +10,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace Frontend.Services.Tests
+namespace Frontend.Tests.Service
 {
     public class DeviceServiceTest
     {

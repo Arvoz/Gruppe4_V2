@@ -3,7 +3,6 @@ using Backend.Ports;
 using Backend.Service;
 using Moq;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using Xunit;
 
@@ -106,6 +105,62 @@ namespace Backend.Tests.Service
 
             // Assert
             Assert.Null(result);
-        }        
+        }
+
+
+        // Integration tests:
+        [Fact]
+        public async Task AddGroup_ShouldCallRepositoryAddGroup()
+        {
+            // Arrange
+            var newGroup = new Group { Name = "NewGroup" };
+
+            // Act
+            await _groupService.AddGroup(newGroup);
+
+            // Assert
+            _groupRepositoryMock.Verify(repo => repo.AddGroup(newGroup), Times.Once);
+        }
+
+        [Fact]
+        public async Task DeleteGroup_ShouldCallRepositoryDeleteGroup()
+        {
+            // Arrange
+            var groupId = 1;
+
+            // Act
+            await _groupService.DeleteGroup(groupId);
+
+            // Assert
+            _groupRepositoryMock.Verify(repo => repo.DeleteGroup(groupId), Times.Once);
+        }
+
+        [Fact]
+        public async Task AddDeviceToGroup_ShouldCallRepositoryAddDeviceToGroup()
+        {
+            // Arrange
+            var groupId = 1;
+            var device = new Device { Id = 1, Name = "Device1" };
+
+            // Act
+            await _groupService.AddDeviceToGroup(groupId, device);
+
+            // Assert
+            _groupRepositoryMock.Verify(repo => repo.AddDeviceToGroup(groupId, device), Times.Once);
+        }
+
+        [Fact]
+        public async Task RemoveDeviceFromGroup_ShouldCallRepositoryRemoveDeviceFromGroup()
+        {
+            // Arrange
+            var groupId = 1;
+            var deviceId = 1;
+
+            // Act
+            await _groupService.RemoveDeviceFromGroup(groupId, deviceId);
+
+            // Assert
+            _groupRepositoryMock.Verify(repo => repo.RemoveDeviceFromGroup(groupId, deviceId), Times.Once);
+        }
     }
 }
