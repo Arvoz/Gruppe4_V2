@@ -50,11 +50,23 @@ namespace Backend.Service
 
         public async Task UpdateGroupDevice(int groupId, bool state)
         {
+            var groups = await _groupRepository.GetAllGroups();
             var group = await _groupRepository.GetGroupById(groupId);
             foreach (var device in group.Devices)
             {
                 await _groupRepository.UpdateGroup(groupId, device.Id, state);
+                foreach (var otherGroup in groups)
+                {
+                    if (otherGroup.Devices.Any(d => d.Id == device.Id))
+                    {
+                        await _groupRepository.UpdateGroup(otherGroup.Id, device.Id, state);
+                    }
+                }
+                {
+                    
+                }
             }
+            
         }
         
     }
