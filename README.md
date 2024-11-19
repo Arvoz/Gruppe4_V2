@@ -3,9 +3,9 @@ Brukermanual for prototype - FullKontroll.
 
 
 Hva trenger du?
-.NET SDK versjon 6.0 og 8.0:
-- 6.0 brukes for GUI.
-- 8.0 brukes for backend og frontend.
+- .NET SDK versjon 6.0 og 8.0:
+    - 6.0 brukes for GUI.
+    - 8.0 brukes for backend og frontend.
 
 - Last ned .NET 6.0: https://dotnet.microsoft.com/en-us/download/dotnet/6.0
 - Last ned .NET 8.0: https://dotnet.microsoft.com/en-us/download/dotnet/8.0
