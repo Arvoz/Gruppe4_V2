@@ -6,6 +6,7 @@ Hva trenger du?
 .NET SDK versjon 6.0 og 8.0:
 - 6.0 brukes for GUI.
 - 8.0 brukes for backend og frontend.
+
 Last ned .NET 6.0: https://dotnet.microsoft.com/en-us/download/dotnet/6.0
 Last ned .NET 8.0: https://dotnet.microsoft.com/en-us/download/dotnet/8.0
 
@@ -25,15 +26,14 @@ Starte prosjektet:
 
 
 Bruke applikasjonen:
-Navigasjon i frontend:
-Bruk frontend-siden til å:
+Navigasjon i frontend - bruk frontend-siden til å:
 - Opprette grupper
 - Legge til og fjerne enheter fra grupper
 - Navigere mellom ulike funksjoner
 - Formålet er å simulere smarthjem-enheter i forskjellige rom, slik at flere enheter kan styres samtidig (f.eks. skru av alle lysene i stua med ett klikk).
 
 Simulator (GUI):
-Gå til Simulator-fanen på frontend-siden.
+- Gå til Simulator-fanen på frontend-siden.
 I GUI:
 - Velg en forhåndsdefinert gruppe i dropdownmenyen oppe til høyre.
 - Skru av og på lys i den valgte gruppen.
@@ -43,8 +43,8 @@ I GUI:
 
 
 Vanlige problemer og løsninger:
-Hvis porter allerede er i bruk:
-- Endre portene i launchSettings.json i prosjektmappen (både for frontend og backend).
-- Alternativt, stopp andre programmer som bruker de samme portene.
-Manglende avhengigheter:
-- Hvis nødvendig programvare eller SDK-er mangler, vil feilmeldinger vanligvis angi hva som må installeres (f.eks. .NET SDK 6.0 og 8.0).
+- Hvis porter allerede er i bruk:
+    - Endre portene i launchSettings.json i prosjektmappen (både for frontend og backend).
+    - Alternativt, stopp andre programmer som bruker de samme portene.
+- Manglende avhengigheter:
+    - Hvis nødvendig programvare eller SDK-er mangler, vil feilmeldinger vanligvis angi hva som må installeres (f.eks. .NET SDK 6.0 og 8.0).
