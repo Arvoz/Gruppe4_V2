@@ -1,6 +1,6 @@
 ﻿@model List<Device>
 
-<h2>Device List</h2>
+<h2>Liste over enheter</h2>
 <ul>
     @foreach (var device in Model)
     {
@@ -12,14 +12,14 @@
                 {
                     <input type="hidden" name="id" value="@device.Id" />
                     <input type="hidden" name="paired" value="false" />
-                    <button type="submit" class="btn btn-warning" >Pair false</button>
+                    <button type="submit" class="btn btn-warning" >Koble fra</button>
                 }
 
                 @if (device.Paired == false)
                 {
                     <input type="hidden" name="id" value="@device.Id" />
                     <input type="hidden" name="paired" value="true" />
-                    <button type="submit" class="btn btn-success">Pair true</button>
+                    <button type="submit" class="btn btn-success">Koble til</button>
                 }
 
             </form>
