@@ -1,5 +1,5 @@
-Brukermanual for prototype - FullKontroll
-Denne veiledningen forklarer hvordan du setter opp og kjører prototypen til FullKontroll-prosjektet, inkludert backend, frontend og GUI-simulatoren. Følg trinnene nedenfor for å sikre en vellykket oppstart.
+Brukermanual for prototype - FullKontroll.
+- Denne veiledningen forklarer hvordan du setter opp og kjører prototypen til FullKontroll-prosjektet, inkludert backend, frontend og GUI-simulatoren. Følg trinnene nedenfor for å sikre en vellykket oppstart.
 
 
 Hva trenger du?
