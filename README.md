@@ -37,9 +37,9 @@ Simulator (GUI):
 - I GUI:
     - Velg en forhåndsdefinert gruppe i dropdownmenyen oppe til høyre.
     - Skru av og på lys i den valgte gruppen.
-    - Alternativt kan du opprette egne grupper og legge til enheter (lys). En enhet kan tilhøre flere grupper samtidig (med vilje).
     - Bruk "Oppdater Grupper (GET)" for å hente liste fra backend med gruppeinformasjon.
     - En slider simulerer et vrihjul for justering av funksjoner som lydvolum eller lysfarge (dette er foreløpig ikke funksjonelt).
+- Alternativt kan du opprette egne grupper og legge til enheter (lys). En enhet kan tilhøre flere grupper samtidig (med vilje).
 
 
 Vanlige problemer og løsninger:
