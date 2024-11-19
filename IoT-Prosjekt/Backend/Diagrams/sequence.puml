@@ -16,13 +16,13 @@ Backend -> Data: Sjekker database/json
 Data --> Backend: Er registrert
 Backend --> GUI: Allerede registrert
 
-== Using the API Key ==
-GUI -> Backend: Send API request with API key
-Backend -> Data: Validate API key
-Data --> Backend: API key valid
-Backend -> Data: Fetch device status
+== Bruker API-Key ==
+GUI -> Backend: Sender API med Api-nøkkel
+Backend -> Data: Sjekker Api-nøkkelen
+Data --> Backend: Api-nøkkel er riktig
+Backend -> Data: Henter Device status
 Data --> Backend: Device status
-Backend --> GUI: Return device status
+Backend --> GUI: Returnerer Device status
 
 == Styring av lys ==
 GUI -> Backend: Skru av/på lys
