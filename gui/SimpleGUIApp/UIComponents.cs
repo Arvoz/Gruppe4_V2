@@ -10,14 +10,15 @@ namespace SimpleGUIApp
     public class UIComponents
     {
         private Form form;
+
         public TextBox screenTextBox;
         public ComboBox groupComboBox;
+        private Label groupLabel; // Ny label for overskriften
         public TrackBar myTrackBar;
         private Label sliderLabel;
         private GroupBox buttonGroup;
         private GroupBox sliderGroup;
         private Button getRequestButton;
-        private Button postRequestButton;
 
         public UIComponents(Form form)
         {
@@ -32,11 +33,9 @@ namespace SimpleGUIApp
             SetupSliderGroup();
             SetupApiButtons();
 
-            // Koble AdjustForResize til formens Resize-event
             form.Resize += (sender, e) => AdjustForResize();
         }
 
-        // Setup TextBox for displaying information
         private void SetupTextBox()
         {
             screenTextBox = new TextBox
@@ -52,28 +51,35 @@ namespace SimpleGUIApp
             form.Controls.Add(screenTextBox);
         }
 
-        // Method to update the screen output
         public void UpdateScreen(string message)
         {
             screenTextBox.AppendText(Environment.NewLine + message);
         }
 
-        // Setup ComboBox for displaying groups
         private void SetupComboBox()
         {
+            // Label for "Grupper"
+            groupLabel = new Label
+            {
+                Text = "Grupper",
+                Font = new System.Drawing.Font("Arial", 10, System.Drawing.FontStyle.Bold),
+                Location = new System.Drawing.Point(form.ClientSize.Width - 220, 10),
+                AutoSize = true
+            };
+            form.Controls.Add(groupLabel);
+
+            // ComboBox for grupper
             groupComboBox = new ComboBox
             {
                 DropDownStyle = ComboBoxStyle.DropDownList,
                 Size = new System.Drawing.Size(200, 30),
-                Location = new System.Drawing.Point(form.ClientSize.Width - 220, 10)
+                Location = new System.Drawing.Point(form.ClientSize.Width - 220, 40) // Plassering under label
             };
 
-            LoadGroupsFromJson(); // Laster inn grupper fra standard JSON-fil
-
+            LoadGroupsFromJson();
             form.Controls.Add(groupComboBox);
         }
 
-        // Load groups from a JSON file into the ComboBox
         public void LoadGroupsFromJson(string filePath = "groups.json")
         {
             try
@@ -89,17 +95,16 @@ namespace SimpleGUIApp
 
                 if (groups != null)
                 {
-                    groupComboBox.Items.Clear(); // Fjern tidligere elementer
+                    groupComboBox.Items.Clear();
                     foreach (var group in groups)
                     {
                         if (group.Name != null)
                         {
-                            groupComboBox.Items.Add(group); // Legg til ny gruppe
-                            Console.WriteLine($"Lagt til gruppe: {group.Name}");
+                            groupComboBox.Items.Add(group);
                         }
                     }
 
-                    groupComboBox.DisplayMember = "Name"; // Vis gruppe-navn i dropdown
+                    groupComboBox.DisplayMember = "Name";
                 }
             }
             catch (Exception ex)
@@ -108,7 +113,6 @@ namespace SimpleGUIApp
             }
         }
 
-        // Setup Button Group (Action buttons)
         private void SetupButtonGroup()
         {
             buttonGroup = new GroupBox
@@ -122,21 +126,22 @@ namespace SimpleGUIApp
             {
                 Text = "På",
                 Size = new System.Drawing.Size(100, 50),
-                Location = new System.Drawing.Point(10, 30)
+                Location = new System.Drawing.Point(10, 30),
+                BackColor = System.Drawing.Color.LightGreen
             };
             myButton.Click += (sender, e) =>
             {
                 SendBoolValue(true);
                 UpdateScreen("Light on");
             };
-
             buttonGroup.Controls.Add(myButton);
 
             Button secondButton = new Button
             {
                 Text = "Av",
                 Size = new System.Drawing.Size(100, 50),
-                Location = new System.Drawing.Point(150, 30)
+                Location = new System.Drawing.Point(150, 30),
+                BackColor = System.Drawing.Color.IndianRed
             };
             secondButton.Click += (sender, e) =>
             {
@@ -164,7 +169,6 @@ namespace SimpleGUIApp
             }
         }
 
-        // Setup Slider Group
         private void SetupSliderGroup()
         {
             sliderGroup = new GroupBox
@@ -201,61 +205,45 @@ namespace SimpleGUIApp
             form.Controls.Add(sliderGroup);
         }
 
-        // Setup API buttons (GET and POST)
         private void SetupApiButtons()
         {
             getRequestButton = new Button
             {
-                Text = "GET Request",
+                Text = "Oppdater Gruppe(GET)",
                 Size = new System.Drawing.Size(100, 50),
-                Location = new System.Drawing.Point(50, 450)
+                Location = new System.Drawing.Point(50, 450),
+                BackColor = System.Drawing.Color.LightBlue
             };
             getRequestButton.Click += async (sender, e) =>
             {
-                string response = await new ApiHandler(form).SendGetRequest("http://localhost:5048/api/v1/Group/getAll");
-                UpdateScreen("GET Response: " + response);
-                File.WriteAllText("./groups.json", response);
-                LoadGroupsFromJson("./groups.json"); // Oppdater gruppelisten
+                try
+                {
+                    string response = await new ApiHandler(form).SendGetRequest("http://localhost:5048/api/v1/Group/getAll");
+                    UpdateScreen("GET Response: " + response);
+                    File.WriteAllText("./groups.json", response);
+                    LoadGroupsFromJson("./groups.json");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"GET Request Error: {ex.Message}");
+                }
             };
+
             form.Controls.Add(getRequestButton);
-
-            postRequestButton = new Button
-            {
-                Text = "POST Request",
-                Size = new System.Drawing.Size(100, 50),
-                Location = new System.Drawing.Point(200, 450)
-            };
-            postRequestButton.Click += async (sender, e) =>
-            {
-                string response = await new ApiHandler(form).SendPostRequest("http://localhost:5013/group/PostFromGui", "Hello from GUI");
-                UpdateScreen("POST Response: " + response);
-
-                // Oppdater gruppene etter POST
-                string getResponse = await new ApiHandler(form).SendGetRequest("http://localhost:5048/api/v1/Group/getAll");
-                File.WriteAllText("./groups.json", getResponse);
-                LoadGroupsFromJson("./groups.json");
-            };
-            form.Controls.Add(postRequestButton);
         }
 
-        // Dynamisk Resizing
         private void AdjustForResize()
         {
             int formWidth = form.ClientSize.Width;
             int formHeight = form.ClientSize.Height;
 
+            groupLabel.Location = new System.Drawing.Point(formWidth - groupComboBox.Width - 20, 10);
+            groupComboBox.Location = new System.Drawing.Point(formWidth - groupComboBox.Width - 20, 40);
+
             screenTextBox.Width = formWidth - 100;
-            groupComboBox.Location = new System.Drawing.Point(formWidth - groupComboBox.Width - 20, 10);
-
-            buttonGroup.Width = formWidth - 100;
-            sliderGroup.Width = formWidth - 100;
-
-            getRequestButton.Location = new System.Drawing.Point(50, formHeight - 120);
-            postRequestButton.Location = new System.Drawing.Point(200, formHeight - 120);
         }
     }
 
-    // Modellklasser for JSON-dataene
     public class Group
     {
         [JsonPropertyName("id")]

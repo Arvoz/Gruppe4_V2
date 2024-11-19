@@ -11,7 +11,7 @@ namespace SimpleGUIApp
         public Form1()
         {
             // Initialize the form properties
-            this.Text = "API Interaction Example";
+            this.Text = "ESP Simulator";
             this.Size = new System.Drawing.Size(600, 600);
             this.MinimumSize = new System.Drawing.Size(500, 500);
 
