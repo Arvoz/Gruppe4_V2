@@ -33,7 +33,7 @@ Navigasjon i frontend - bruk frontend-siden til å:
 - Formålet er å simulere smarthjem-enheter i forskjellige rom, slik at flere enheter kan styres samtidig (f.eks. skru av alle lysene i stua med ett klikk).
 
 Simulator (GUI):
-- Gå til Simulator-fanen på frontend-siden.
+- Gå til Hjem-fanen på frontend-siden.
 - I GUI:
     - Velg en forhåndsdefinert gruppe i dropdownmenyen oppe til høyre.
     - Skru av og på lys i den valgte gruppen.
