@@ -16,53 +16,53 @@ namespace Frontend.Controllers
             _deviceService = deviceService;
         }
 
+        // Viser en oversikt over alle gruppene
         public async Task<IActionResult> Index()
         {
-            List<Group> groups = await _groupService.GetGroupsAsync();
-
-            return View(groups);
+            List<Group> groups = await _groupService.GetGroupsAsync(); // Henter listen med gruppene
+            return View(groups); // Sender gruppelisten til "Index"-visningen
         }
 
+        // Viser skjema for å opprette en ny gruppe
         public async Task<IActionResult> Create()
         {
-            List<Device> devices = await _deviceService.GetDevicesAsync();
-            var groups = await _groupService.GetGroupsAsync();
-
-            ViewBag.Devices = devices;
-
-            return View(groups);
+            List<Device> devices = await _deviceService.GetDevicesAsync(); // Henter listen over enheter
+            var groups = await _groupService.GetGroupsAsync(); // Henter listen med grupper
+            ViewBag.Devices = devices; // Legger enhetene i ViewBag for bruk i visningen
+            return View(groups); // Sender gruppelisten til "Create"-visningen
         }
 
+        // Viser en redigeringsside for en spesifikk gruppe
         public async Task<IActionResult> Edit(int groupId)
         {
-            var groups = await _groupService.GetGroupsAsync();
-            var group = groups.FirstOrDefault(g => g.Id == groupId);
-            
-            return View(group);
+            var groups = await _groupService.GetGroupsAsync(); // Henter listen med gruppene
+            var group = groups.FirstOrDefault(g => g.Id == groupId); // Finner gruppen med spesifisert ID
+            return View(group); // Sender gruppen til "Edit"-visningen
         }
 
+        // Oppretter en ny gruppe og legger til en enhet
         [HttpPost]
         public async Task<IActionResult> CreateGroup(string groupName, int deviceId)
         {
-            await _groupService.CreateGroupWithDevice(groupName, deviceId);
-
-            return RedirectToAction("Create");
+            await _groupService.CreateGroupWithDevice(groupName, deviceId); // Oppretter gruppen med en enhet
+            return RedirectToAction("Create"); // Går tilbake til "Create"-siden
         }
 
+        // Fjerner en enhet fra en gruppe
         [HttpPost]
         public async Task<IActionResult> RemoveDeviceFromGroup(int groupId, int deviceId)
         {
-            await _groupService.RemoveDeviceFromGroup(groupId, deviceId);
-            
-            return RedirectToAction("Index");
+            await _groupService.RemoveDeviceFromGroup(groupId, deviceId); // Fjerner enheten fra gruppen
+            return RedirectToAction("Index"); // Går tilbake til "Index"-siden
         }
 
+        // Sletter en gruppe basert på ID
         [HttpPost]
         public async Task<IActionResult> RemoveGroup(int groupId)
         {
-            await _groupService.RemoveGroup(groupId);
-            
-            return RedirectToAction("Index");
+            await _groupService.RemoveGroup(groupId); // Sletter gruppen
+            return RedirectToAction("Index"); // Går tilbake til "Index"-siden
         }
     }
 }
+

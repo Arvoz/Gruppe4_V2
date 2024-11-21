@@ -3,32 +3,39 @@
     ViewData["Title"] = "Simulator";
 }
 
-@foreach (var device in Model)
+<div class="device-container">
+    @foreach (var device in Model)
 {
     if (device.Paired)
     {
-        if (device.State)
-        {
-            <form asp-action="UpdateDeviceState" method="post">
-                <h2>@device.Name</h2>
-                <input type="hidden" name="id" value="@device.Id"/>
-                <input type="hidden" name="state" value="false"/>
-                <img src="~/images/pic_bulbon.gif" alt="LightOn" onclick="this.closest('form').submit();"/>
-            </form>
+        <div class="device-card">
+            @if (device.State)
+            {
+                <form class="form-sim" asp-action="UpdateDeviceState" method="post">
+                    <h2 class="name-sim">@device.Name</h2>
+                    <input type="hidden" name="id" value="@device.Id"/>
+                    <input type="hidden" name="state" value="false"/>
+                    <img src="~/images/pic_bulbon.gif" alt="LightOn" onclick="this.closest('form').submit();"/>
+                </form>
 
-        }
+            }
 
-        else
-        {
-            <form asp-action="UpdateDeviceState" method="post">
-                <h2>@device.Name</h2>
-                <input type="hidden" name="id" value="@device.Id"/>
-                <input type="hidden" name="state" value="true"/>
-                <img src="~/images/pic_bulboff.gif" alt="LightOff" onclick="this.closest('form').submit();"/>
-            </form>
-        }
+            else
+            {
+                <form class="form-sim" asp-action="UpdateDeviceState" method="post">
+                    <h2 class="name-sim">@device.Name</h2>
+                    <input type="hidden" name="id" value="@device.Id"/>
+                    <input type="hidden" name="state" value="true"/>
+                    <img src="~/images/pic_bulboff.gif" alt="LightOff" onclick="this.closest('form').submit();"/>
+                </form>
+            } 
+            </div>
+
     }
 }
+</div>
+
+
 
 <script>
     // Definerer variabler for antall oppdateringer og intervaller

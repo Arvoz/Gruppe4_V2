@@ -20,3 +20,205 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+/* Simulator */
+.device-container {
+  display: flex; 
+  flex-wrap: wrap; 
+  justify-content: space-between;
+  gap: 10px; 
+  padding: 10px; 
+}
+
+.device-card {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  width: 150px;
+  text-align: center;
+  padding: 7%;
+}
+
+
+.device-card img {
+  width: 100px;
+  height: auto;
+  cursor: pointer;
+}
+
+.device-card h2 {
+  font-size: 16px;
+  margin: 10px 0 0 0;
+}
+
+
+/*  */
+#form-create {
+  padding: 15%;
+}
+
+/* Title styling */
+#device-list-title {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #343a40;
+}
+
+/* List styling */
+#device-list {
+  list-style-type: none; /* Fjerner punktmerking */
+  padding: 0; /* Fjerner standard padding */
+  margin: 0; /* Fjerner standard margin */
+}
+
+/* Styling for each device item */
+.device-item {
+  display: flex; /* Setter innhold på samme linje */
+  justify-content: space-between; /* Fordeler plass mellom elementene */
+  align-items: center; /* Sentrerer vertikalt */
+  background-color: #f8f9fa; /* Lys bakgrunnsfarge */
+  padding: 10px; /* Litt luft rundt innholdet */
+  margin-bottom: 10px; /* Avstand mellom elementene */
+  border: 1px solid #ddd; /* Legger til en grå ramme */
+  border-radius: 5px; /* Runde hjørner */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Legger til skygge */
+}
+
+/* Styling for device name and status */
+.device-name {
+  font-weight: bold; /* Fet skrift */
+  font-size: 16px; /* Justerer fontstørrelse */
+  color: #212529; /* Mørkere tekstfarge */
+}
+
+.device-status {
+  font-size: 14px;
+  color: #6c757d; /* Sekundær tekstfarge */
+}
+
+/* Form styling */
+.device-form {
+  margin: 0; /* Fjerner standard margin */
+}
+
+/* Button styling */
+.connect-btn {
+  background-color: #28a745; /* Grønn farge for "Koble til" */
+  color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.connect-btn:hover {
+  background-color: #218838; /* Mørkere grønn ved hover */
+}
+
+.disconnect-btn {
+  background-color: #eb1c1c; /* Gul farge for "Koble fra" */
+  color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.disconnect-btn:hover {
+  background-color: #eb5959; /* Mørkere gul ved hover */
+}
+
+/* Group */
+#group-list-title {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #343a40;
+}
+
+/* List styling for groups */
+#group-list {
+  list-style-type: none; /* Fjerner punktmerking */
+  padding: 0;
+  margin: 0;
+}
+
+/* Styling for each group item */
+.group-item {
+  background-color: #f8f9fa;
+  padding: 15px;
+  margin-bottom: 10px; /* Litt avstand mellom gruppene */
+}
+
+/* Styling for group header */
+.group-header {
+  display: flex;
+  justify-content: space-between; /* Sørger for avstand mellom navn og knapp */
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+/* Group name */
+.group-name {
+  font-size: 20px;
+  font-weight: bold;
+  color: #212529;
+  margin: 0;
+}
+
+/* Edit button styling */
+.group-edit-form .edit-group-btn {
+  background-color: #5bc0de; /* Gul for "Rediger" */
+  color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.group-edit-form .edit-group-btn:hover {
+  background-color: #0087b0; 
+}
+
+.device-list {
+  background-color: transparent;
+  list-style-type: none; 
+  padding: 0;
+  margin: 0;
+}
+
+.device-item {
+  background-color: transparent;
+  font-size: 16px;
+  margin: 5px 0;
+  padding-left: 20px;
+}
+
+/*Edit siden*/
+.edit-group {
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 600px; 
+}
+
+.edit-group h2 {
+  font-size: 24px;
+  color: #343a40;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#edit-item h2{
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+
+
+
