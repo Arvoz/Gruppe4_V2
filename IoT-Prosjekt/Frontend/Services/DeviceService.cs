@@ -35,6 +35,7 @@ namespace Frontend.Services
             var request = new CreateDeviceDto()
             {
                 Name = name,
+                Type = "light",
                 State = false,
                 Paired = false,
                 Brightness = 100
@@ -42,6 +43,13 @@ namespace Frontend.Services
 
             var response = await _httpClient.PostAsJsonAsync($"http://localhost:{_port}/api/v1/device/add", request);
 
+            response.EnsureSuccessStatusCode();
+        }
+
+        public async Task UpdateDeviceState(int id, bool state)
+        {
+            var response = await _httpClient.PostAsJsonAsync($"http://localhost:{_port}/api/v1/device/updateState/{id}", state);
+            
             response.EnsureSuccessStatusCode();
         }
 

@@ -33,11 +33,35 @@ namespace Frontend.Controllers
             return View(groups);
         }
 
+        public async Task<IActionResult> Edit(int groupId)
+        {
+            var groups = await _groupService.GetGroupsAsync();
+            var group = groups.FirstOrDefault(g => g.Id == groupId);
+            
+            return View(group);
+        }
+
         [HttpPost]
         public async Task<IActionResult> CreateGroup(string groupName, int deviceId)
         {
             await _groupService.CreateGroupWithDevice(groupName, deviceId);
 
+            return RedirectToAction("Create");
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> RemoveDeviceFromGroup(int groupId, int deviceId)
+        {
+            await _groupService.RemoveDeviceFromGroup(groupId, deviceId);
+            
+            return RedirectToAction("Index");
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> RemoveGroup(int groupId)
+        {
+            await _groupService.RemoveGroup(groupId);
+            
             return RedirectToAction("Index");
         }
     }

@@ -68,6 +68,22 @@ namespace Backend.Controllers
             return BadRequest();
         }
 
+        [HttpPost("deleteDeviceFromGroup")]
+        public async Task<IActionResult> DeleteDeviceFromGroup([FromBody] DeleteDeviceFromGroupDto request)
+        {
+            var group = await _groupService.GetGroupById(request.GroupId);
+            if (group != null)
+            {
+                if (!group.Devices.Any(d => d.Id == request.DeviceId))
+                {
+                    return BadRequest();
+                }
+                await _groupService.RemoveDeviceFromGroup(group.Id, request.DeviceId);
+                return Ok("Enheten har blitt slettet");
+            }
+            return BadRequest();
+        }
+
         [HttpPost("updateDevices")]
         public async Task<IActionResult> UpdateDevices([FromBody] ChangeDevicesFromGroupDto request)
         {

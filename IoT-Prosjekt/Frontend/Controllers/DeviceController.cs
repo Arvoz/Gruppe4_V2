@@ -48,5 +48,13 @@ namespace Frontend.Controllers
             return RedirectToAction("Index");
         }
 
+        [HttpPost]
+        public async Task<IActionResult> UpdateDeviceState(int id, bool state)
+        {
+            await _deviceService.UpdateDeviceState(id, state);
+            
+            return  RedirectToAction("LightSimulator");
+        }
+
     }
 }

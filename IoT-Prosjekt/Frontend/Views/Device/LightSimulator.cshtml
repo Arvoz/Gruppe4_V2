@@ -9,14 +9,23 @@
     {
         if (device.State)
         {
-            <h2>@device.Name</h2>
-            <img src="~/images/pic_bulbon.gif" alt="LightOn"/>
+            <form asp-action="UpdateDeviceState" method="post">
+                <h2>@device.Name</h2>
+                <input type="hidden" name="id" value="@device.Id"/>
+                <input type="hidden" name="state" value="false"/>
+                <img src="~/images/pic_bulbon.gif" alt="LightOn" onclick="this.closest('form').submit();"/>
+            </form>
+
         }
 
         else
         {
-            <h2>@device.Name</h2>
-            <img src="~/images/pic_bulboff.gif" alt="LightOff"/>
+            <form asp-action="UpdateDeviceState" method="post">
+                <h2>@device.Name</h2>
+                <input type="hidden" name="id" value="@device.Id"/>
+                <input type="hidden" name="state" value="true"/>
+                <img src="~/images/pic_bulboff.gif" alt="LightOff" onclick="this.closest('form').submit();"/>
+            </form>
         }
     }
 }

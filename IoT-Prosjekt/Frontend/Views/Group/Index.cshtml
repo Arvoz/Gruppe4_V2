@@ -6,6 +6,10 @@
     @foreach (var group in Model)
     {
         <h2>@group.Name</h2>
+        <form asp-action="Edit" method="post">
+            <input type="hidden" name="groupId" value="@group.Id"/>
+            <button type="submit" class="btn btn-warning">Rediger</button>
+        </form>
 
         @foreach  (var device in group.Devices)
         {

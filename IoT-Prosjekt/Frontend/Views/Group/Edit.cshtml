@@ -1,0 +1,22 @@
+@model Group
+
+<h2>@Model.Name</h2>
+
+<ul>
+    
+    @foreach (var device in Model.Devices)
+    {
+        <h2>@device.Name</h2>
+        <form asp-action="RemoveDeviceFromGroup" method="post">
+            <input type="hidden" name="deviceId" value="@device.Id"/>
+            <input type="hidden" name="groupId" value="@Model.Id"/>
+            <button type="submit" class="btn btn-warning">Fjern enhet fra gruppen</button>
+        </form>
+    }
+    
+</ul>
+
+<form asp-action="RemoveGroup" method="post">
+    <input type="hidden" name="groupId" value="@Model.Id"/>
+    <button type="submit" class="btn btn-warning">Slett gruppen</button>
+</form>

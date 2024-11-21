@@ -34,5 +34,25 @@ namespace Frontend.Services
             response.EnsureSuccessStatusCode();
         }
 
+        public async Task RemoveDeviceFromGroup(int groupId, int deviceId)
+        {
+            var request = new RemoveGroupFromGroupDto()
+            {
+                GroupId = groupId,
+                DeviceId = deviceId
+            };
+            var response =
+                await _httpClient.PostAsJsonAsync($"http://localhost:{_port}/api/v1/Group/deleteDeviceFromGroup",
+                    request);
+            response.EnsureSuccessStatusCode();
+        }
+
+        public async Task RemoveGroup(int groupId)
+        {
+            var response = await _httpClient.PostAsync($"http://localhost:{_port}/api/v1/Group/deleteGroup/{groupId}", null);
+            response.EnsureSuccessStatusCode();
+        }
+        
+
     }
 }
